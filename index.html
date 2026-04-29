@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Förderverein BSOF – Brandenburgisches Staatsorchester Frankfurt</title>
+  <meta name="description" content="Der Förderverein des Brandenburgischen Staatsorchesters Frankfurt (Oder) unterstützt Musikprojekte, Jugendarbeit und das kulturelle Leben in der Region.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    h1, h2, h3, .tier-name, .grusswort-quote, .nav-logo-text strong,
+    .footer-col h5, .ueber-image-badge { font-family: 'EB Garamond', Georgia, serif; }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════ -->
+<nav class="site-nav" aria-label="Hauptnavigation">
+  <div class="container nav-inner">
+    <a href="#home" class="nav-logo" aria-label="Förderverein BSOF – Startseite">
+      <!-- SVG-Logo: Wellen + FÖRDERVEREIN BSOF -->
+      <img src="images/logo.svg" alt="Förderverein BSOF Logo" style="height:44px;width:auto;">
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#ueber-uns">Über uns</a></li>
+      <li><a href="#projekte">Projekte</a></li>
+      <li><a href="#mitglied-werden">Mitglied werden</a></li>
+      <li><a href="#spenden">Spenden</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+
+    <a href="#mitglied-werden" class="btn btn-primary nav-cta">Mitglied werden</a>
+    <button class="nav-hamburger" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section id="home" class="hero">
+  <div class="hero-slides" aria-hidden="true">
+    <div class="hero-slide active" style="background-image:url('images/hero1.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('images/hero2.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('images/hero3.jpg')"></div>
+  </div>
+  <div class="hero-overlay"></div>
+
+  <!-- Wellen-Deko aus dem BSOF-Logo -->
+  <div class="wave-deco" aria-hidden="true">
+    <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="200" cy="200" rx="190" ry="190" stroke="currentColor" stroke-width="2"/>
+      <ellipse cx="200" cy="200" rx="148" ry="148" stroke="currentColor" stroke-width="2"/>
+      <ellipse cx="200" cy="200" rx="106" ry="106" stroke="currentColor" stroke-width="2"/>
+      <ellipse cx="200" cy="200" rx="64"  ry="64"  stroke="currentColor" stroke-width="2"/>
+      <ellipse cx="200" cy="200" rx="24"  ry="24"  stroke="currentColor" stroke-width="2"/>
+      <line x1="200" y1="10"  x2="200" y2="390" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+      <line x1="10"  y1="200" x2="390" y2="200" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+      <line x1="57"  y1="57"  x2="343" y2="343" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+      <line x1="343" y1="57"  x2="57"  y2="343" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+    </svg>
+  </div>
+
+  <div class="container hero-content">
+    <span class="section-label">Förderverein BSOF e. V.</span>
+    <h1>Wir gehen stiften.<br>Sie auch?</h1>
+    <p>
+      Als Freundeskreis des Brandenburgischen Staatsorchesters Frankfurt (Oder)
+      setzen wir uns für lebendige Orchesterkultur in unserer Region ein –
+      durch Mitgliedschaften, Spenden und eigene Veranstaltungen.
+    </p>
+    <div class="hero-actions">
+      <a href="#mitglied-werden" class="btn btn-primary">Jetzt Mitglied werden</a>
+      <a href="#spenden" class="btn btn-outline">Spenden</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Mehr erfahren</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="6 9 12 15 18 9"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     INTRO STRIP
+══════════════════════════════════════════ -->
+<div class="intro-strip">
+  <div class="container intro-strip-inner">
+    <p>„In der Mitte der Schwierigkeit liegt die Möglichkeit." – Albert Einstein</p>
+    <a href="#ueber-uns" class="btn btn-outline">Unser Verein</a>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     ÜBER UNS
+══════════════════════════════════════════ -->
+<section id="ueber-uns" class="ueber-uns">
+  <div class="container">
+    <div class="ueber-grid">
+      <div class="ueber-image fade-in">
+        <img
+          src="images/orchester.jpg"
+          alt="Das Brandenburgische Staatsorchester Frankfurt auf der Bühne"
+          onerror="this.outerHTML='<div style=\'background:var(--cream-dark);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center\'><svg width=64 height=64 viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#C8B8A2\' stroke-width=\'1\'><path d=\'M9 19V6l12-3v13\'/><circle cx=\'6\' cy=\'19\' r=\'3\'/><circle cx=\'18\' cy=\'16\' r=\'3\'/></svg></div>'"
+        >
+        <div class="ueber-image-badge">
+          <strong>seit</strong>
+          <span>Frankfurt (Oder)</span>
+        </div>
+      </div>
+
+      <div class="ueber-text fade-in">
+        <span class="section-label">Über den Förderverein</span>
+        <h2>Enthusiasmus für Kultur. Für Musik. Für unser Orchester.</h2>
+        <div class="divider"></div>
+        <p>
+          Der Förderverein des Brandenburgischen Staatsorchesters Frankfurt (Oder) e. V.
+          ist der unabhängige Freundeskreis des BSOF. Wir unterstützen das Orchester
+          dort, wo öffentliche Mittel nicht hinreichen: bei besonderen Projekten,
+          der Kinder- und Jugendarbeit und der Präsenz des Orchesters in der Stadtgesellschaft.
+        </p>
+        <p>
+          Als Mitglied sind Sie Teil einer Gemeinschaft, die Orchesterkultur in Frankfurt (Oder)
+          lebendig hält. Sie erhalten Einblicke hinter die Kulissen, bevorzugten Kartenzugang
+          und laden wir Sie zu exklusiven Veranstaltungen ein.
+        </p>
+        <p>
+          Unser Antrieb ist einfach: die Überzeugung, dass ein Sinfonieorchester zum Herzschlag
+          einer Stadt gehört – und dass wir gemeinsam mehr erreichen als alleine.
+        </p>
+        <a href="#ziele" class="btn btn-outline-dark">Unsere Ziele</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     UNSERE ZIELE
+══════════════════════════════════════════ -->
+<section id="ziele" class="ziele">
+  <div class="container">
+    <div class="section-header centered fade-in">
+      <span class="section-label">Was wir tun</span>
+      <h2>Unsere Ziele</h2>
+      <div class="divider"></div>
+      <p>Laut Satzung fördern wir Kunst und Kultur, das BSOF als bedeutenden kulturellen
+         Faktor des Landes Brandenburg sowie die Bildung von Kindern, Jugendlichen und
+         Erwachsenen – und die kulturellen Verbindungen mit Polen und Osteuropa.</p>
+    </div>
+
+    <div class="ziele-grid">
+      <div class="ziel-card fade-in">
+        <div class="ziel-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/>
+          </svg>
+        </div>
+        <h3>Lobby-Bildung für unser Staatsorchester</h3>
+        <p>Wir setzen uns politisch und gesellschaftlich für das BSOF ein –
+           als bedeutenden kulturellen Faktor des Landes Brandenburg und
+           als unverzichtbaren Teil des Lebens in Frankfurt (Oder).</p>
+      </div>
+
+      <div class="ziel-card fade-in">
+        <div class="ziel-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h3>Finanzielle Unterstützung &amp; Spendeneinwerbung</h3>
+        <p>Wir werben Spenden und Stiftungsmittel ein und setzen sie dort ein,
+           wo öffentliche Mittel nicht ausreichen – für Projekte, die das
+           Orchester aus eigenen Kräften nicht stemmen könnte.</p>
+      </div>
+
+      <div class="ziel-card fade-in">
+        <div class="ziel-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+        </div>
+        <h3>Kinder- und Jugendarbeit im Fokus</h3>
+        <p>Musikvermittlung und Bildung für Kinder, Jugendliche und Erwachsene
+           sind satzungsgemäßer Kern unserer Arbeit – ebenso die Ausbildungs­förderung
+           junger Nachwuchskünstlerinnen und -künstler.</p>
+      </div>
+
+      <div class="ziel-card fade-in">
+        <div class="ziel-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+          </svg>
+        </div>
+        <h3>Unterstützung bei Sonderveranstaltungen</h3>
+        <p>Vom Tag der offenen Tür bis zu Benefizkonzerten – wir begleiten
+           das Orchester bei besonderen Anlässen organisatorisch und
+           finanziell.</p>
+      </div>
+
+      <div class="ziel-card fade-in">
+        <div class="ziel-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+          </svg>
+        </div>
+        <h3>Eigene Programme mit BSOF-Musikern</h3>
+        <p>Wir initiieren eigene kleine Konzertformate – Kammermusik,
+           Lesekonzerte, Hauskonzerte – bei denen Musikerinnen und Musiker
+           des BSOF auf besondere, unvermittelte Weise erlebbar sind.</p>
+      </div>
+
+      <div class="ziel-card fade-in">
+        <div class="ziel-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <h3>Präsenz des BSOF in der Innenstadt</h3>
+        <p>Straßenkonzerte und Kooperationen mit Frankfurter Einrichtungen
+           bringen das Orchester zu den Menschen – und pflegen zugleich die
+           kulturellen Verbindungen mit unseren polnischen Nachbarn.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     PROJEKTE
+══════════════════════════════════════════ -->
+<section id="projekte" class="projekte">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Was wir bewegen</span>
+      <h2>Geförderte &amp; eigene Projekte</h2>
+      <div class="divider"></div>
+      <p>Von der Unterstützung bestehender Initiativen bis zu eigenständig organisierten
+         Veranstaltungen – hier ein Überblick über unsere Arbeit.</p>
+    </div>
+
+    <div class="projekte-grid">
+
+      <div class="projekt-card fade-in">
+        <div class="projekt-card-img">
+          <img src="images/projekt-kinder.jpg" alt="Schulkonzert des BSOF"
+               onerror="this.outerHTML='<div class=\'projekt-card-img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><path d=\'M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z\'/></svg></div>'">
+        </div>
+        <div class="projekt-card-body">
+          <span class="projekt-tag">Förderung</span>
+          <h3>Schulkonzerte &amp; Musikvermittlung</h3>
+          <p>Wir finanzieren Schulkonzerte und Workshops, bei denen Kinder und Jugendliche
+             das Orchester hautnah erleben und Instrumente ausprobieren können.</p>
+          <span class="projekt-link">
+            Mehr erfahren
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="projekt-card fade-in">
+        <div class="projekt-card-img">
+          <img src="images/projekt-kammer.jpg" alt="Kammerkonzert im Wohnzimmerformat"
+               onerror="this.outerHTML='<div class=\'projekt-card-img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><path d=\'M9 19V6l12-3v13\'/><circle cx=\'6\' cy=\'19\' r=\'3\'/><circle cx=\'18\' cy=\'16\' r=\'3\'/></svg></div>'">
+        </div>
+        <div class="projekt-card-body">
+          <span class="projekt-tag">Eigenes Projekt</span>
+          <h3>Kammer­konzerte im Wohnzimmer</h3>
+          <p>Musiker des BSOF spielen in privatem Rahmen – intim, unvermittelt und
+             mit Raum für Gespräche. Ein besonderes Format für Mitglieder.</p>
+          <span class="projekt-link">
+            Mehr erfahren
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="projekt-card fade-in">
+        <div class="projekt-card-img">
+          <img src="images/projekt-innenstadt.jpg" alt="Straßenkonzert in Frankfurt Oder"
+               onerror="this.outerHTML='<div class=\'projekt-card-img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><path d=\'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\'/><path d=\'M15 11a3 3 0 11-6 0 3 3 0 016 0z\'/></svg></div>'">
+        </div>
+        <div class="projekt-card-body">
+          <span class="projekt-tag">Eigenes Projekt</span>
+          <h3>BSOF in der Innenstadt</h3>
+          <p>Pop-up-Konzerte auf Märkten, Plätzen und in der Fußgängerzone bringen
+             das Orchester zu den Menschen – auch zu denen, die es noch nicht kennen.</p>
+          <span class="projekt-link">
+            Mehr erfahren
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="projekt-card fade-in">
+        <div class="projekt-card-img">
+          <img src="images/projekt-tag.jpg" alt="Tag der offenen Tür beim BSOF"
+               onerror="this.outerHTML='<div class=\'projekt-card-img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><circle cx=\'12\' cy=\'12\' r=\'3\'/></svg></div>'">
+        </div>
+        <div class="projekt-card-body">
+          <span class="projekt-tag">Förderung</span>
+          <h3>Tag der offenen Tür</h3>
+          <p>Beim Tag der offenen Tür öffnet das Orchester seine Proberäume und
+             lädt die Stadtgesellschaft ein – wir unterstützen Organisation und Durchführung.</p>
+          <span class="projekt-link">
+            Mehr erfahren
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     MITGLIED WERDEN
+══════════════════════════════════════════ -->
+<section id="mitglied-werden" class="mitglied">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Mitmachen</span>
+      <h2>Mitglied werden</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="simple-card-grid">
+
+      <div class="fade-in">
+        <p class="simple-intro">
+          Als Mitglied der Freunde und Förderer des BSOF unterstützen Sie nicht nur
+          das Orchester – Sie werden Teil einer Gemeinschaft, die Musik liebt und
+          Kultur in Frankfurt (Oder) aktiv gestaltet.
+        </p>
+        <ul class="beitritt-benefits" style="margin-bottom:2rem;">
+          <li class="beitritt-benefit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Einladungen zu Mitgliederveranstaltungen &amp; Probenbesuchen
+          </li>
+          <li class="beitritt-benefit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Exklusive Kammerkonzerte mit BSOF-Musikern
+          </li>
+          <li class="beitritt-benefit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Mitglieder-Newsletter mit Einblicken hinter die Kulissen
+          </li>
+          <li class="beitritt-benefit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Steuerlich absetzbar – Zuwendungsbestätigung auf Anfrage
+          </li>
+        </ul>
+      </div>
+
+      <div class="info-card fade-in">
+        <div class="beitritt-fee" style="margin-top:0;margin-bottom:1.5rem;">
+          <div class="fee-amount">30 <span style="font-size:1.5rem;font-family:var(--font-sans);font-weight:400;">€</span></div>
+          <div class="fee-period">pro Jahr · fällig im Januar</div>
+          <div class="fee-note">Kündigung: 3 Monate vor Ende des Geschäftsjahres</div>
+        </div>
+
+        <p style="color:rgba(255,255,255,0.65); font-size:0.9rem; margin-bottom:1.5rem;">
+          Laden Sie die Beitrittserklärung herunter, füllen Sie diese aus und senden
+          Sie sie unterschrieben an uns per Post oder eingescannt per E-Mail.
+        </p>
+
+        <a href="beitrittserklaerung.pdf" download class="btn btn-primary" style="width:100%;justify-content:center;gap:0.6rem;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17"/>
+          </svg>
+          Beitrittserklärung herunterladen
+        </a>
+
+        <p style="color:rgba(255,255,255,0.35); font-size:0.8rem; margin-top:1.25rem; text-align:center;">
+          Firmen- und Institutionsmitgliedschaften auf Anfrage ·
+          <a href="#kontakt" style="color:rgba(255,255,255,0.5); text-decoration:underline;">Kontakt</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     SPENDEN
+══════════════════════════════════════════ -->
+<section id="spenden" class="spenden">
+  <div class="container">
+    <div class="simple-card-grid">
+
+      <div class="fade-in">
+        <span class="section-label">Unterstützen</span>
+        <h2>Spenden – direkt &amp; wirksam</h2>
+        <div class="divider"></div>
+        <p>
+          Wir freuen uns über Ihre Spende, ob klein oder groß. Jeder Beitrag
+          fließt vollständig in die Förderprojekte des Vereins und kommt
+          direkt dem Brandenburgischen Staatsorchester Frankfurt zugute.
+        </p>
+        <p style="margin-top:1rem;">
+          Sollten Sie eine steuerliche Zuwendungsbestätigung benötigen,
+          kontaktieren Sie uns gern unter
+          <a href="mailto:foerderverein@bsof.de" style="color:var(--red);">foerderverein@bsof.de</a>.
+        </p>
+      </div>
+
+      <div class="info-card info-card--light fade-in">
+        <h3 style="margin-bottom:1.5rem;">Unsere Kontoverbindung</h3>
+        <div class="bank-box" style="margin-top:0;">
+          <h4>Bankverbindung</h4>
+          <div class="bank-row">
+            <span class="bank-label">Kontoinhaber</span>
+            <span class="bank-value">Förderverein des BSOF</span>
+          </div>
+          <div class="bank-row">
+            <span class="bank-label">IBAN</span>
+            <span class="bank-value">DE74&nbsp;1705&nbsp;5050&nbsp;3135&nbsp;1011&nbsp;41</span>
+          </div>
+          <div class="bank-row">
+            <span class="bank-label">Bank</span>
+            <span class="bank-value">Sparkasse Oder-Spree</span>
+          </div>
+          <p class="bank-note">Als gemeinnütziger Verein stellen wir auf Wunsch eine steuerliche Zuwendungsbestätigung aus.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     GRUSSWORT
+══════════════════════════════════════════ -->
+<section id="grusswort" class="grusswort">
+  <div class="container">
+    <div class="grusswort-inner">
+
+      <div class="grusswort-person fade-in">
+        <img
+          src="images/vorsitzender.jpg"
+          alt="Dr. Axel Berg, 1. Vorsitzender FV BSOF"
+          onerror="this.outerHTML='<div class=\'grusswort-person-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><path d=\'M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>'"
+        >
+        <h4>Dr. Axel Berg</h4>
+        <p>1. Vorsitzender, Förderverein BSOF e. V.</p>
+      </div>
+
+      <div class="fade-in">
+        <span class="section-label">Grußwort</span>
+        <h2>Eine Botschaft des Vorsitzenden</h2>
+        <div class="divider"></div>
+        <blockquote class="grusswort-quote">
+          „In der Mitte der Schwierigkeit liegt die Möglichkeit."<br>
+          – Albert Einstein
+        </blockquote>
+        <div class="grusswort-text">
+          <p>Liebe Musikbegeisterte und Freunde des Brandenburgischen Staatsorchesters Frankfurt,</p>
+          <p>dass die Kultur in Schwierigkeiten steckt, ist kein Geheimnis. Unser Staatsorchester
+             weiß das nur zu gut. Wir sind angetreten, Möglichkeiten zu finden. Zu unterstützen,
+             zu helfen, Impuls- und Lobbyarbeit zu leisten.</p>
+          <p>Unser Antrieb? Enthusiasmus für die Kultur. Für die Musik. Für UNSER Staatsorchester –
+             und damit für unsere Stadt Frankfurt (Oder). Helfen Sie mit?</p>
+          <p>Ein Förderverein lebt von Menschen, die anpacken. Die nicht nur zuhören, sondern
+             mitgestalten. Werden Sie Teil dieser Gemeinschaft – als Mitglied, als Spender
+             oder als aktive Helferin und aktiver Helfer.</p>
+        </div>
+        <p class="grusswort-sig">Herzlich,<br><strong>Dr. Axel Berg</strong><br>1. Vorsitzender FV BSOF</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     KONTAKT
+══════════════════════════════════════════ -->
+<section id="kontakt" class="kontakt">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Kontakt</span>
+      <h2>Sprechen Sie uns an</h2>
+      <div class="divider"></div>
+      <p>Haben Sie Fragen zur Mitgliedschaft, zu Projekten oder möchten Sie sich
+         ehrenamtlich engagieren? Wir freuen uns über Ihre Nachricht.</p>
+    </div>
+
+    <div class="kontakt-simple fade-in">
+      <div class="kontakt-card">
+        <h4>Anschrift</h4>
+        <p>Freunde und Förderer des BSOF e. V.<br>
+           Lebuser Mauerstraße 4<br>
+           15230 Frankfurt (Oder)</p>
+      </div>
+      <div class="kontakt-card kontakt-card--centered">
+        <h4>E-Mail</h4>
+        <a class="kontakt-card-link" href="mailto:foerderverein@bsof.de">foerderverein@bsof.de</a>
+      </div>
+      <div class="kontakt-card kontakt-card--centered">
+        <h4>Hauptwebsite des BSOF</h4>
+        <a class="kontakt-card-link" href="https://www.bsof.de" target="_blank" rel="noopener">www.bsof.de</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logo.svg" alt="Förderverein BSOF" style="height:48px;width:auto;">
+        <p style="margin-top:1rem;">
+          Freunde und Förderer des BSOF e. V.<br>
+          Lebuser Mauerstraße 4<br>
+          15230 Frankfurt (Oder)<br>
+          <a href="mailto:foerderverein@bsof.de" style="color:#fff;font-size:0.85rem;">foerderverein@bsof.de</a>
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Verein</h5>
+        <ul>
+          <li><a href="#ueber-uns">Über uns</a></li>
+          <li><a href="#ziele">Unsere Ziele</a></li>
+          <li><a href="#grusswort">Grußwort</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Mitmachen</h5>
+        <ul>
+          <li><a href="#mitglied-werden">Mitglied werden</a></li>
+          <li><a href="#spenden">Spenden</a></li>
+          <li><a href="#kontakt">Ehrenamt</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Projekte</h5>
+        <ul>
+          <li><a href="#projekte">Schulkonzerte</a></li>
+          <li><a href="#projekte">Kammerkonzerte</a></li>
+          <li><a href="#projekte">BSOF in der Stadt</a></li>
+          <li><a href="https://www.bsof.de" target="_blank" rel="noopener">→ bsof.de</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 Freunde und Förderer des BSOF e. V.</span>
+      <div class="footer-legal">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="satzung.pdf" target="_blank">Satzung</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
