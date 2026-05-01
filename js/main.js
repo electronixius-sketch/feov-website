@@ -21,8 +21,10 @@ onScroll();
 const hamburger = document.querySelector('.nav-hamburger');
 const navLinks  = document.querySelector('.nav-links');
 hamburger?.addEventListener('click', () => {
-  hamburger.classList.toggle('open');
+  const isOpen = hamburger.classList.toggle('open');
   navLinks.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', String(isOpen));
+  hamburger.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
 });
 navLinks?.querySelectorAll('a').forEach(a => {
   a.addEventListener('click', () => {
@@ -49,37 +51,6 @@ const fadeObs   = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); fadeObs.unobserve(e.target); } });
 }, { threshold: 0.12 });
 fadeItems.forEach(el => fadeObs.observe(el));
-
-// ── Donation amount buttons ──
-document.querySelectorAll('.amount-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const input = document.querySelector('#betrag');
-    if (input) {
-      const val = btn.dataset.amount;
-      input.value = val === 'custom' ? '' : val;
-      if (val === 'custom') input.focus();
-    }
-  });
-});
-
-// ── Contact / Donation form ──
-document.querySelectorAll('form[data-form]').forEach(form => {
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const btn = form.querySelector('button[type=submit]');
-    const orig = btn.textContent;
-    btn.textContent = 'Wird gesendet…';
-    btn.disabled = true;
-    setTimeout(() => {
-      btn.textContent = '✓ Vielen Dank!';
-      form.reset();
-      document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('active'));
-      setTimeout(() => { btn.textContent = orig; btn.disabled = false; }, 3000);
-    }, 1200);
-  });
-});
 
 // ── Smooth scroll for anchor links ──
 document.querySelectorAll('a[href^="#"]').forEach(a => {

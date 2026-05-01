@@ -15,7 +15,8 @@
       "Bash(cp \"Bilder und Material/hero.jpg \\(2\\).jpg\"  \"images/hero2.jpg\")",
       "Bash(cp \"Bilder und Material/hero.jpg \\(3\\).JPG\"  \"images/hero3.jpg\")",
       "Bash(cp \"Bilder und Material/hero.jpg.JPG\"      \"images/hero.jpg\")",
-      "Bash(cp \"Bilder und Material/orchester.jpg.JPG\" \"images/orchester.jpg\")"
+      "Bash(cp \"Bilder und Material/orchester.jpg.JPG\" \"images/orchester.jpg\")",
+      "Bash(git add *)"
     ]
   }
 }

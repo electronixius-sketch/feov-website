@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesekonzerte – Förderverein BSOF</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    h1, h2, h3 { font-family: 'EB Garamond', Georgia, serif; }
+    .projekt-page { padding-top: calc(var(--nav-h) + 60px); padding-bottom: 80px; }
+    .projekt-hero-img {
+      width: 100%; max-height: 420px;
+      object-fit: cover;
+      margin-bottom: 3rem;
+      display: block;
+    }
+    .projekt-meta {
+      display: flex; align-items: center; gap: 1rem;
+      margin-bottom: 1.5rem; flex-wrap: wrap;
+    }
+    .projekt-page h1 { margin-bottom: 1rem; }
+    .projekt-page .divider { margin: 1.5rem 0; }
+    .projekt-page p { color: var(--mid); line-height: 1.8; margin-bottom: 1rem; }
+    .projekt-page h2 { font-size: 1.4rem; margin: 2.5rem 0 0.75rem; color: var(--dark); }
+    .back-link {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: var(--red); font-size: 0.88rem; font-weight: 600;
+      text-decoration: none; margin-bottom: 2.5rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+    .info-box {
+      background: var(--cream); border-left: 3px solid var(--red);
+      padding: 1.25rem 1.5rem; margin: 2rem 0;
+    }
+    .info-box p { margin: 0; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav scrolled">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.svg" alt="Förderverein BSOF Logo" style="height:44px;width:auto;">
+    </a>
+    <a href="index.html#projekte" class="btn btn-outline-dark" style="font-size:0.85rem;padding:0.6rem 1.25rem;">← Alle Projekte</a>
+  </div>
+</nav>
+
+<main class="projekt-page">
+  <div class="container" style="max-width:780px;">
+
+    <a href="index.html#projekte" class="back-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="19 12 5 12"/><polyline points="12 5 5 12 12 19"/>
+      </svg>
+      Zurück zu allen Projekten
+    </a>
+
+    <div class="projekt-meta">
+      <span class="projekt-tag">Eigenes Projekt</span>
+      <span class="section-label" style="margin:0;">Literatur &amp; Musik</span>
+    </div>
+
+    <h1>Lesekonzerte</h1>
+    <div class="divider"></div>
+
+    <img src="images/projekt-innenstadt.jpg" alt="Lesekonzert – Literatur und Musik" class="projekt-hero-img"
+         onerror="this.style.display='none'">
+
+    <p>
+      Die Lesekonzerte sind ein eigenständiges Format des Fördervereins des Brandenburgischen
+      Staatsorchesters Frankfurt (Oder): Literatur und Musik begegnen sich auf Augenhöhe.
+      Ein Text wird gelesen, Musik wird gespielt – und gemeinsam entsteht ein Abend, der
+      beide Kunstformen in ein neues Licht rückt.
+    </p>
+    <p>
+      Die Idee ist so einfach wie wirkungsvoll: Eine Erzählung, ein Gedicht oder ein Essay
+      wird von einer Leserin oder einem Leser vorgetragen. Musikerinnen und Musiker des BSOF
+      rahmen den Text musikalisch ein – manchmal als Kontrast, manchmal als Klangbild,
+      manchmal als Dialog.
+    </p>
+
+    <h2>Das Format</h2>
+    <p>
+      Lesekonzerte finden in kleinen, atmosphärischen Räumen statt – in Bibliotheken,
+      Salons oder privaten Wohnzimmern. Die Nähe zum Publikum ist gewollt: Kein großes
+      Podium, keine Distanz, dafür echte Begegnung zwischen Künstlerinnen, Künstlern
+      und Gästen.
+    </p>
+    <p>
+      Jede Veranstaltung ist einmalig – Texte und Programme werden eigens für jeden
+      Abend zusammengestellt. So entsteht jedes Mal ein neues, unwiederholbares Erlebnis.
+    </p>
+
+    <div class="info-box">
+      <p><strong>Eigenes Projekt des Fördervereins BSOF:</strong> Die Lesekonzerte werden
+      vollständig vom Förderverein organisiert und finanziert. Mitglieder erhalten
+      bevorzugten Zugang und werden persönlich zu jedem Abend eingeladen.</p>
+    </div>
+
+    <h2>Mitmachen &amp; Unterstützen</h2>
+    <p>
+      Werden Sie Mitglied und erleben Sie die nächsten Lesekonzerte hautnah – als
+      Teil einer Gemeinschaft, die Literatur und Musik gleichermaßen liebt.
+    </p>
+    <a href="index.html#mitglied-werden" class="btn btn-primary">Jetzt Mitglied werden</a>
+
+  </div>
+</main>
+
+</body>
+</html>
