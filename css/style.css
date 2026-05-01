@@ -230,7 +230,13 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.05rem); color: var(--mid); }
   z-index: 2;
   color: var(--white);
 }
-.hero-content .section-label { color: rgba(255,255,255,0.7); }
+.hero-logo {
+  height: 90px;
+  width: auto;
+  opacity: 0.65;
+  margin-bottom: 1.5rem;
+  display: block;
+}
 .hero-content h1 {
   color: var(--white);
   max-width: 800px;

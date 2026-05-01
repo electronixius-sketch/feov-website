@@ -16,7 +16,11 @@
       "Bash(cp \"Bilder und Material/hero.jpg \\(3\\).JPG\"  \"images/hero3.jpg\")",
       "Bash(cp \"Bilder und Material/hero.jpg.JPG\"      \"images/hero.jpg\")",
       "Bash(cp \"Bilder und Material/orchester.jpg.JPG\" \"images/orchester.jpg\")",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git config *)",
+      "Bash(git push *)",
+      "mcp__Claude_Preview__preview_start"
     ]
   }
 }
