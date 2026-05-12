@@ -11,11 +11,70 @@
   <style>
     h1, h2, h3 { font-family: 'EB Garamond', Georgia, serif; }
     .projekt-page { padding-top: calc(var(--nav-h) + 60px); padding-bottom: 80px; }
-    .projekt-hero-img {
-      width: 100%; max-height: 420px;
-      object-fit: cover;
-      margin-bottom: 3rem;
+    /* ── Flyer-Slider ── */
+    .flyer-slider {
+      margin-bottom: 2.5rem;
+    }
+    .flyer-track {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      background: #f5f1ec;
+      border-radius: 4px;
+      padding: 1.5rem;
+      min-height: 120px;
+    }
+    .flyer-slide {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .flyer-slide.active { display: flex; }
+    .flyer-slide img {
+      width: 100%;
+      max-width: 420px;
+      height: auto;
       display: block;
+      border-radius: 3px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    }
+    .flyer-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1rem;
+      gap: 1rem;
+    }
+    .flyer-btn {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: none;
+      border: 2px solid var(--red);
+      color: var(--red);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 0.45rem 0.9rem;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background 0.18s, color 0.18s;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-family: inherit;
+    }
+    .flyer-btn:hover { background: var(--red); color: #fff; }
+    .flyer-btn:disabled { opacity: 0.25; cursor: default; pointer-events: none; }
+    .flyer-dots {
+      display: flex; gap: 0.5rem; align-items: center;
+    }
+    .flyer-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #d9cfc4; border: none; cursor: pointer; padding: 0;
+      transition: background 0.18s, transform 0.18s;
+    }
+    .flyer-dot.active { background: var(--red); transform: scale(1.3); }
+    .flyer-counter {
+      font-size: 0.8rem; color: var(--mid); font-weight: 600;
+      letter-spacing: 0.05em;
     }
     .projekt-meta {
       display: flex; align-items: center; gap: 1rem;
@@ -67,8 +126,36 @@
     <h1>Lesekonzerte</h1>
     <div class="divider"></div>
 
-    <img src="images/projekt-lesekonzerte.jpg" alt="Lesekonzert – Literatur und Musik in der Buchhandlung Ulrich von Hutten" class="projekt-hero-img"
-         onerror="this.style.display='none'">
+    <div class="flyer-slider">
+      <div class="flyer-track">
+        <div class="flyer-slide active">
+          <img src="images/Lesekonzerte/Screenshot%202026-05-12%20145930.png"
+               alt="Lesekonzert – Flyer 1">
+        </div>
+        <div class="flyer-slide">
+          <img src="images/Lesekonzerte/Screenshot%202026-05-12%20150033.png"
+               alt="Lesekonzert – Flyer 2">
+        </div>
+        <div class="flyer-slide">
+          <img src="images/Lesekonzerte/Flyer%20Wien%20130326.jpg"
+               alt="Lesekonzert Wien – Flyer">
+        </div>
+      </div>
+      <div class="flyer-nav">
+        <button class="flyer-btn" id="lk-prev">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+          Zurück
+        </button>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;">
+          <div class="flyer-dots" id="lk-dots"></div>
+          <div class="flyer-counter" id="lk-counter">1 / 3</div>
+        </div>
+        <button class="flyer-btn" id="lk-next">
+          Weiter
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
 
     <p>
       <strong>Literatur trifft Musik:</strong> Bei unseren Lesekonzerten verbinden sich
@@ -115,5 +202,38 @@
   </div>
 </main>
 
+<script>
+  (function () {
+    const slides = Array.from(document.querySelectorAll('.flyer-slide'));
+    const dotsEl = document.getElementById('lk-dots');
+    const counter = document.getElementById('lk-counter');
+    const btnPrev = document.getElementById('lk-prev');
+    const btnNext = document.getElementById('lk-next');
+    let current = 0;
+
+    slides.forEach(function (_, i) {
+      const dot = document.createElement('button');
+      dot.className = 'flyer-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Flyer ' + (i + 1));
+      dot.addEventListener('click', function () { goTo(i); });
+      dotsEl.appendChild(dot);
+    });
+
+    function goTo(index) {
+      slides[current].classList.remove('active');
+      dotsEl.children[current].classList.remove('active');
+      current = index;
+      slides[current].classList.add('active');
+      dotsEl.children[current].classList.add('active');
+      counter.textContent = (current + 1) + ' / ' + slides.length;
+      btnPrev.disabled = current === 0;
+      btnNext.disabled = current === slides.length - 1;
+    }
+
+    btnPrev.addEventListener('click', function () { if (current > 0) goTo(current - 1); });
+    btnNext.addEventListener('click', function () { if (current < slides.length - 1) goTo(current + 1); });
+    btnPrev.disabled = true;
+  })();
+</script>
 </body>
 </html>
