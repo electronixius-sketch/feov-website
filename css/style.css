@@ -238,7 +238,7 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.05rem); color: var(--mid); }
 }
 .hero-content .section-label { color: rgba(255,255,255,0.7); }
 .hero-logo {
-  height: 56px;
+  height: clamp(1.6rem, 4.5vw, 3.75rem);
   width: auto;
   display: block;
   opacity: 0.80;
