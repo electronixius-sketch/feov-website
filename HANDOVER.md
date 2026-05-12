@@ -49,6 +49,7 @@
 - **Inline-`<style>`-Block** aus `index.html <head>` vollständig in `css/style.css` überführt
 
 **Runde 5 – Spannungsfelder-Slider:**
+
 - `projekt-spannungsfelder.html` **vollständig neu gebaut** als Slider-Seite mit allen 5 Projekten:
   - SF I „Musik und Technik" (23.9.2021)
   - SF II „Orient meets Occident" (1.5.2022)
@@ -59,6 +60,14 @@
   - Sponsor-Logos als Platzhalter (Dateipfade vorbereitet, Bilder noch einzupflegen)
 - Spannungsfelder-Kachel in `index.html`: Tag von „Eigenes Projekt" → **„Förderung"**, Beschreibungstext angepasst
 
+**Runde 6 – Logo-Austausch & Navigations-Button:**
+- **Neues Logo** `images/Logo ohne Hintergrund.svg` (ohne roten Hintergrund) in allen 10 HTML-Dateien eingesetzt (Nav + Footer)
+  - `index.html` (Nav + Footer), `datenschutz.html`, `impressum.html`, `projekt-auftragswerke.html`, `projekt-education.html`, `projekt-lesekonzerte.html`, `projekt-minikonzerte.html`, `projekt-spannungsfelder.html`, `projekt-spannungsfeld-4.html`, `projekt-spannungsfeld-5.html`
+- **Hero-Logo** verkleinert: 90 px → 56 px, Deckkraft 65 % → 80 %, linksbündig (bereits durch `display: block` gewährleistet)
+- **„Jetzt spenden"-Button** in der Hauptnavigation ergänzt (neben „Mitglied werden")
+  - Weißer Outline-Stil auf transparentem Hero, roter Outline auf weißer Scrolled-Nav
+  - Beide Buttons in `.nav-cta-group` gewrappt; auf Mobilgeräten gemeinsam ausgeblendet
+
 ## Aktueller Stand
 
 Voll funktionsfähige One-Page-Website (`index.html`) mit:
@@ -68,7 +77,6 @@ Voll funktionsfähige One-Page-Website (`index.html`) mit:
 - `impressum.html` und `datenschutz.html` korrekt befüllt
 
 **Noch offen:**
-- **Hero-Logo**: Roten Hintergrund im `images/logo.svg` entfernen → danach Logo wieder in Hero einsetzen (Position und CSS-Klasse wie im Plan vorgesehen)
 - **Echte Projektbilder** für alle 5 Kacheln (Platzhalterpfade: `projekt-auftragswerke.jpg`, `projekt-education.jpg`, `projekt-kammer.jpg`, `projekt-lesekonzerte.jpg`, `projekt-innenstadt.jpg`)
 - **Spannungsfelder-Detailseite**: Ausführliche Texte + Cover-Bild von Christine noch ausstehend (`projekt-spannungsfelder.html` enthält Platzhalter-Hinweis)
 - **Education-Broschüre**: Als PDF oder Einbettung in `projekt-education.html` ergänzen sobald vorhanden
@@ -77,9 +85,9 @@ Voll funktionsfähige One-Page-Website (`index.html`) mit:
 
 ## Nächste geplante Schritte
 
-1. Roten Hintergrund im Logo-SVG entfernen → Hero-Logo wieder einsetzen
-2. Echte Bilder für alle 5 Projektkacheln einpflegen
-3. Ausführliche Texte + Cover für `projekt-spannungsfelder.html` von Christine erhalten und eintragen
-4. Education-Broschüre als PDF einbinden
-5. Foto Dr. Axel Berg einpflegen
-6. Alte Spannungsfeld-Einzelseiten (4 & 5) löschen
+1. Echte Bilder für alle 5 Projektkacheln einpflegen (Platzhalterpfade: `projekt-auftragswerke.jpg`, `projekt-education.jpg`, `projekt-kammer.jpg`, `projekt-lesekonzerte.jpg`, `projekt-innenstadt.jpg`)
+2. Ausführliche Texte + Cover für `projekt-spannungsfelder.html` von Christine erhalten und eintragen
+3. Education-Broschüre als PDF einbinden
+4. Foto Dr. Axel Berg einpflegen (`images/vorsitzender.jpg`)
+5. Alte Spannungsfeld-Einzelseiten `projekt-spannungsfeld-4.html` + `projekt-spannungsfeld-5.html` löschen (nicht mehr verlinkt)
+6. Sparkasse Oder-Spree Logo: PNG/JPG-Version von der Bank anfragen (aktuell nur EPS)

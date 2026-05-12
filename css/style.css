@@ -150,7 +150,13 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.05rem); color: var(--mid); }
 }
 .nav-links a:hover, .nav-links a.active { color: var(--white); }
 .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
-.nav-cta { margin-left: 0.5rem; }
+.nav-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 0.5rem;
+}
+.nav-cta { }
 .nav-cta.btn-primary {
   background: var(--white);
   color: var(--red);
@@ -159,6 +165,22 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.05rem); color: var(--mid); }
 .nav-cta.btn-primary:hover {
   background: var(--cream);
   border-color: var(--cream);
+}
+.nav-cta-spenden {
+  border-color: rgba(255,255,255,0.7);
+  color: var(--white);
+}
+.nav-cta-spenden:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: var(--white);
+}
+.site-nav.scrolled .nav-cta-spenden {
+  border-color: var(--red);
+  color: var(--red);
+}
+.site-nav.scrolled .nav-cta-spenden:hover {
+  background: var(--red);
+  color: var(--white);
 }
 .nav-hamburger {
   display: none;
@@ -216,11 +238,11 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.05rem); color: var(--mid); }
 }
 .hero-content .section-label { color: rgba(255,255,255,0.7); }
 .hero-logo {
-  height: 90px;
+  height: 56px;
   width: auto;
   display: block;
-  opacity: 0.65;
-  margin-bottom: 1rem;
+  opacity: 0.80;
+  margin-bottom: 1.25rem;
 }
 .hero-content h1 {
   color: var(--white);
@@ -694,7 +716,7 @@ section { padding: var(--section-pad) 0; }
     gap: 1.25rem; box-shadow: 0 8px 24px rgba(0,0,0,0.2);
   }
   .nav-links.open { display: flex; }
-  .nav-cta        { display: none; }
+  .nav-cta-group  { display: none; }
   .nav-hamburger  { display: flex; }
 
   .ueber-grid, .grusswort-inner,
