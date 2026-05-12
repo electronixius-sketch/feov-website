@@ -238,11 +238,11 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.05rem); color: var(--mid); }
 }
 .hero-content .section-label { color: rgba(255,255,255,0.7); }
 .hero-logo {
-  height: clamp(4rem, 13vw, 6.5rem);
+  height: clamp(5rem, 16vw, 8rem);
   width: auto;
   display: block;
-  opacity: 0.80;
-  margin-bottom: 1.25rem;
+  opacity: 0.85;
+  margin-bottom: 1.5rem;
 }
 .hero-content h1 {
   color: var(--white);
