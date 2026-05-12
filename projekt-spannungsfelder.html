@@ -10,42 +10,229 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <style>
     h1, h2, h3 { font-family: 'EB Garamond', Georgia, serif; }
-    .projekt-page { padding-top: calc(var(--nav-h) + 60px); padding-bottom: 80px; }
-    .projekt-hero-img {
-      width: 100%; max-height: 420px;
-      object-fit: cover;
-      margin-bottom: 3rem;
-      display: block;
+
+    .projekt-page {
+      padding-top: calc(var(--nav-h) + 60px);
+      padding-bottom: 80px;
     }
-    .projekt-meta {
-      display: flex; align-items: center; gap: 1rem;
-      margin-bottom: 1.5rem; flex-wrap: wrap;
-    }
-    .projekt-page h1 { margin-bottom: 1rem; }
-    .projekt-page .divider { margin: 1.5rem 0; }
-    .projekt-page p { color: var(--mid); line-height: 1.8; margin-bottom: 1rem; }
-    .projekt-page h2 { font-size: 1.4rem; margin: 2.5rem 0 0.75rem; color: var(--dark); }
+
+    /* ── Back link ── */
     .back-link {
       display: inline-flex; align-items: center; gap: 0.5rem;
       color: var(--red); font-size: 0.88rem; font-weight: 600;
       text-decoration: none; margin-bottom: 2.5rem;
     }
     .back-link:hover { text-decoration: underline; }
+
+    /* ── Page header ── */
+    .projekt-meta {
+      display: flex; align-items: center; gap: 1rem;
+      margin-bottom: 1.5rem; flex-wrap: wrap;
+    }
+    .sf-page-title {
+      margin-bottom: 0.25rem;
+    }
+    .sf-page-subtitle {
+      color: var(--mid);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    /* ── Slider wrapper ── */
+    .sf-slider {
+      position: relative;
+    }
+
+    /* ── Individual slide ── */
+    .sf-slide {
+      display: none;
+    }
+    .sf-slide.active {
+      display: block;
+    }
+
+    .sf-cover {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 2rem;
+      border-radius: 3px;
+    }
+
+    .sf-slide-header {
+      margin-bottom: 1.5rem;
+    }
+    .sf-slide-header h2 {
+      font-size: 2rem;
+      margin-bottom: 0.3rem;
+      color: var(--dark);
+    }
+    .sf-theme {
+      font-size: 1.25rem;
+      font-family: 'EB Garamond', Georgia, serif;
+      font-style: italic;
+      color: var(--red);
+      margin-bottom: 0.5rem;
+    }
+    .sf-date {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--mid);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .divider { margin: 1.25rem 0; }
+
+    .sf-body p {
+      color: var(--mid);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .sf-section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin: 2rem 0 0.75rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-family: inherit;
+      font-size: 0.8rem;
+    }
+
+    .sf-music-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem;
+    }
+    .sf-music-list li {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #ede7dd;
+      color: var(--mid);
+      font-size: 0.93rem;
+      line-height: 1.5;
+    }
+    .sf-music-list li:last-child { border-bottom: none; }
+    .sf-music-list li strong { color: var(--dark); }
+
+    .sf-credits {
+      font-size: 0.88rem;
+      color: var(--mid);
+      font-style: italic;
+      margin-top: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .sf-yt-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #ff0000;
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.55rem 1.1rem;
+      border-radius: 3px;
+      text-decoration: none;
+      margin: 1rem 0 1.5rem;
+      transition: opacity 0.2s;
+    }
+    .sf-yt-link:hover { opacity: 0.85; }
+
+    .sf-sponsors {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .sf-sponsors img {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+    }
+    .sf-sponsor-note {
+      font-size: 0.85rem;
+      color: var(--mid);
+      margin-bottom: 0.5rem;
+    }
+
     .info-box {
       background: var(--cream); border-left: 3px solid var(--red);
       padding: 1.25rem 1.5rem; margin: 2rem 0;
     }
-    .info-box p { margin: 0; font-size: 0.9rem; }
-    .placeholder-notice {
-      background: #f9f7f4;
-      border: 1px dashed #c8b89a;
-      border-radius: 6px;
-      padding: 2rem;
-      text-align: center;
-      margin: 2rem 0;
+    .info-box p { margin: 0; font-size: 0.9rem; color: var(--mid); line-height: 1.7; }
+
+    /* ── Navigation ── */
+    .sf-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #ede7dd;
+      gap: 1rem;
+    }
+
+    .sf-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: none;
+      border: 2px solid var(--red);
+      color: var(--red);
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 0.6rem 1.1rem;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background 0.18s, color 0.18s;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-family: inherit;
+    }
+    .sf-nav-btn:hover {
+      background: var(--red);
+      color: #fff;
+    }
+    .sf-nav-btn:disabled {
+      opacity: 0.25;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    .sf-dots {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .sf-dot {
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: #d9cfc4;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.18s, transform 0.18s;
+    }
+    .sf-dot.active {
+      background: var(--red);
+      transform: scale(1.3);
+    }
+
+    .sf-counter {
+      font-size: 0.82rem;
       color: var(--mid);
-      font-size: 0.92rem;
-      line-height: 1.7;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 600px) {
+      .sf-nav { flex-wrap: wrap; justify-content: center; }
+      .sf-slide-header h2 { font-size: 1.6rem; }
     }
   </style>
 </head>
@@ -71,48 +258,260 @@
     </a>
 
     <div class="projekt-meta">
-      <span class="projekt-tag">Eigenes Projekt</span>
-      <span class="section-label" style="margin:0;">Konzertreihe</span>
+      <span class="projekt-tag">Förderung</span>
+      <span class="section-label" style="margin:0;">Education-Projekte</span>
     </div>
 
-    <h1>Spannungsfelder</h1>
-    <div class="divider"></div>
-
-    <img src="images/projekt-kammer.jpg" alt="Spannungsfelder – Kammerkonzertreihe" class="projekt-hero-img"
-         onerror="this.style.display='none'">
-
-    <p>
-      <strong>Spannungsfelder</strong> ist eine Kammerkonzertreihe, die der Förderverein
-      des Brandenburgischen Staatsorchesters Frankfurt (Oder) ins Leben gerufen hat.
-      Im Mittelpunkt steht die Begegnung zwischen Publikum und Musikerinnen bzw. Musikern
-      des BSOF in ungewöhnlichen, intimen Formaten – abseits des großen Konzertsaals.
-    </p>
-    <p>
-      Werke verschiedener Epochen begegnen zeitgenössischer Kammermusik. Die Nähe
-      zwischen Musikerinnen, Musikern und Publikum ist das Herzstück des Formats –
-      Gespräche, Fragen und gemeinsames Zuhören gehören dazu.
+    <h1 class="sf-page-title">Spannungsfelder</h1>
+    <p class="sf-page-subtitle">
+      Musik, Theater, Tanz und Diskussion – gemeinsam mit Schülerinnen und Schülern
+      aus Frankfurt (Oder) und der Region.
     </p>
 
-    <div class="placeholder-notice">
-      <strong>Ausführliche Informationen folgen in Kürze.</strong><br>
-      Cover und Projekttext werden zeitnah ergänzt.
+    <!-- ── Slider ── -->
+    <div class="sf-slider">
+
+      <!-- Slide 1 -->
+      <div class="sf-slide active" data-index="0">
+        <img src="images/sf1-cover.jpg" alt="Spannungsfelder I – Musik und Technik" class="sf-cover"
+             onerror="this.style.display='none'">
+        <div class="sf-slide-header">
+          <h2>Spannungsfelder I</h2>
+          <div class="sf-theme">»Musik und Technik«</div>
+          <div class="sf-date">23. September 2021 · Messehalle 4, Frankfurt (Oder)</div>
+        </div>
+        <div class="divider"></div>
+        <div class="sf-body">
+          <p>Was haben Musik und Technik etwas miteinander zu tun? Eine ganze Menge. Denn Komponisten haben sich oftmals für die neuesten technischen Erfindungen ihrer Zeit begeistert.</p>
+          <p>Das fängt schon bei Ludwig van Beethoven an, der Johann Nepomuk Mälzels wegweisende technische Erfindung – das Metronom – als Erster für seine Kompositionen einsetzte.</p>
+          <p>Oder Arthur Honegger, der als begeisterter »Trainspotter« – also Dampflok-Fan – 1923 die imponierenden Geräusche einer großen amerikanischen Dampflok in Musik umsetze: Man hört sie förmlich nachts quer durch den amerikanischen Kontinent rasen…</p>
+          <p>Es geht weiter über Niklosz Rosza, der für das 1920 vorgestellte Theremin – das erste elektrische Instrument, das berührungslos gespielt wurde – den Gänsehaut-Soundtrack zu Hitchcocks Thriller „Spellbound" komponierte – und es hört beim Konzert für Smartphones und Orchester des Franzosen Bernard Cavanna noch nicht auf.</p>
+          <p>Aufgeführt hatten wir dieses und andere technikaffine Musikstücke mit Jugendlichen aus Frankfurt (Oder) und Schwedt.</p>
+
+          <div class="sf-section-title">Musik</div>
+          <ul class="sf-music-list">
+            <li><strong>Ludwig van Beethoven &amp; Johann Nepomuk Melzel</strong> – Sinfonie Nr. 8 F-Dur, op. 93 / 2. Satz Allegretto scherzando</li>
+            <li><strong>Arthur Honegger</strong> – Pacific 231</li>
+            <li><strong>Miklós Rózsa</strong> – Spellbound</li>
+            <li><strong>Alexander Mossolow</strong> – Stahl, daraus: Die Eisengießerei</li>
+            <li><strong>John Adams</strong> – Shaker Loops / 1. Satz Shaking and Trembling</li>
+            <li><strong>Bernard Cavanna</strong> – Geek Bagatelles für Smartphones und Orchester</li>
+          </ul>
+
+          <p class="sf-credits">Howard Griffiths, Dirigent</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="sf-slide" data-index="1">
+        <img src="images/sf2-cover.jpg" alt="Spannungsfelder II – Orient meets Occident" class="sf-cover"
+             onerror="this.style.display='none'">
+        <div class="sf-slide-header">
+          <h2>Spannungsfelder II</h2>
+          <div class="sf-theme">»Orient meets Occident«</div>
+          <div class="sf-date">1. Mai 2022 · Messehalle 4, Frankfurt (Oder)</div>
+        </div>
+        <div class="divider"></div>
+        <div class="sf-body">
+          <p><strong>Johann Wolfgang von Goethe:</strong> <em>Wer sich selbst und andre kennt / Wird auch hier erkennen / Orient und Occident / Sind nicht mehr zu trennen</em></p>
+          <p><strong>Rudyard Kipling:</strong> <em>Ost ist Ost, West ist West, sie werden nie zueinander kommen</em></p>
+          <p><strong>Wer hat Recht? Goethe? Kipling? Beide? Vielleicht – jeder ein bisschen?</strong></p>
+          <p>Das haben wir gemeinsam mit Jugendlichen aus Strausberg und Frankfurt (Oder) bei diesem Education Projekt untersucht – musikalisch und szenisch.</p>
+          <p>Wir haben uns mit den Spannungsfeldern und Unterschieden beschäftigt, die Völker trennen, aber auch zusammenführen können.</p>
+          <p>Das Fremde kann Angst machen, die Angst kann zu Kriegen führen. Woher kommt diese militante Ablehnung des Unbekannten?</p>
+          <p>Und doch hat das Fremde und Unbekannte immer wieder Menschen in den Bann gezogen. Warum wohl wollten kühne Entdecker zu allen Zeiten die Welt – oder unbekannte Welten – kennenlernen?</p>
+          <p>Warum stößt das Fremde, Unbekannte die einen ab und macht ihnen Angst? Warum zieht das Fremde, Unbekannte, andere magisch an und schürt die Neugier?</p>
+          <p>Gemeinsam mit den Jugendlichen haben wir mit musikalischen und künstlerischen Mitteln untersucht, wie Orient und Okzident sich seit Jahrhunderten bekriegten und sich genauso lange mit großer Neugier gegenseitig beobachtet, beeinflusst und voneinander gelernt haben.</p>
+          <p>Deshalb stimmt die simple Formel nicht: Ost ist Ost und West ist West. Nein, der Westen ist längst im Osten und der Osten ist längst im Westen angekommen. Goethe hatte also Recht.</p>
+          <p>Zur Beschreibung dieser Brücken und „friedlichen Eroberungen" des Ostens durch den Westen und des Westens durch den Osten ist die Musik eine wunderbare Sprache. Seit Jahrhunderten. Sie kommt ohne Worte aus, man muss nur genau hinhören. So wie wir das bei diesem Projekt gemacht und weitergegeben haben.</p>
+
+          <div class="sf-section-title">Musik</div>
+          <ul class="sf-music-list">
+            <li><strong>Ferit Tüzün</strong> – Çeşmebaşı Süiti</li>
+            <li><strong>Fazil Say</strong> – Hezarfen / Konzert für Ney und Orchester / 2. Satz</li>
+            <li><strong>Ludwig van Beethoven</strong> – Türkischer Marsch</li>
+            <li><strong>Wolfgang Amadeus Mozart</strong> – Ouvertüre zur Oper „Die Entführung aus dem Serail" / mit Variationen türkischer Instrumente</li>
+            <li><strong>Maurice Ravel</strong> – Bolero</li>
+          </ul>
+
+          <p class="sf-credits">Mit Howard Griffiths als musikalischem Leiter und Schülerinnen und Schülern des Europa-Gymnasiums Frankfurt (Oder) und des Oberstufenzentrums Strausberg.</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="sf-slide" data-index="2">
+        <img src="images/sf3-cover.jpg" alt="Spannungsfelder III – Recht und Gerechtigkeit" class="sf-cover"
+             onerror="this.style.display='none'">
+        <div class="sf-slide-header">
+          <h2>Spannungsfelder III</h2>
+          <div class="sf-theme">»Recht und Gerechtigkeit«</div>
+          <div class="sf-date">27. April 2023 · Konzerthalle Frankfurt (Oder) · ab 7. Klasse</div>
+        </div>
+        <div class="divider"></div>
+        <div class="sf-body">
+          <p><em>„Der Mann fragte: Wer bist du? – Ich bin der Tod, der alle gleichmacht. Da sprach der Mann: Du bist der Rechte, du holst den Reichen wie den Armen ohne Unterschied, du sollst der Pate meines Sohnes sein …</em></p>
+          <p><em>… Siehst du, sprach der Tod, das sind die Lebenslichter der Menschen. Die großen gehören Kindern, die halbgroßen Eheleuten in ihren besten Jahren, die kleinen gehören den Alten. Doch auch Kinder und junge Leute haben oft nur ein kleines Lichtchen."</em></p>
+          <p style="font-size:0.88rem; color:var(--mid);">Aus „Gevatter Tod", Märchen der Gebrüder Grimm</p>
+          <p>Ist es gerecht, wenn ein Kind stirbt, ein älterer Mensch aber noch lange leben darf? Ist es gerecht, wenn jemand, der Geld besitzt, sich Gesundheit kaufen kann und wer arm ist, früher sterben muss? Ist der Tod, der angeblich alle gleich macht, wirklich gerecht? Gibt es einen Unterschied zwischen RECHT und GERECHTIGKEIT? Lohnt es, sich mit diesen Gedanken überhaupt zu beschäftigen? Vor allem, wenn man jung ist?</p>
+          <p>Wir meinen: Ja. Es lohnt sich immer, über die Endlichkeit seines Lebens nachzudenken. Nicht nur, wenn das Leben zu Ende geht – sondern auch jetzt und heute. Um zu erkennen, wie wertvoll jeder Tag ist.</p>
+          <p>Es lohnt sich, über das Thema Gerechtigkeit zu sprechen. Gibt es eine absolute Gerechtigkeit? Und woher oder von wem kommt sie? Und wer hält sich daran? Oder hat jeder seine eigene Definition von Gerechtigkeit?</p>
+          <p>Mit diesen spannende Fragen haben wir uns gemeinsam mit Schülerinnen und Schülern aus Frankfurt (Oder) und Słubice auseinandergesetzt. Das führte zu sehr spannenden Diskussionen und zu einer multimedialen Aufführung mit Musik, Tanz, Schauspiel und Schattentheater.</p>
+
+          <div class="sf-section-title">Musik</div>
+          <ul class="sf-music-list">
+            <li><strong>Alexander Papp</strong> – Chaos / Reconciliation</li>
+            <li><strong>Benjamin Britten</strong> – Variations On A Theme Of Frank Bridge</li>
+            <li><strong>Dmitri Schostakowitsch</strong> – Kammersinfonie Nr. 83 a: I Largo + II – Allegro molto</li>
+            <li><strong>Johann Sebastian Bach</strong> – Matthäuspassion / Erbarme dich (Instrumentalversion)</li>
+            <li><strong>Astor Piazzolla</strong> – Libertango</li>
+          </ul>
+
+          <p class="sf-credits">Mit Howard Griffiths als musikalischem Leiter und mit Schülerinnen und Schülern der Freien Waldorfschule Frankfurt und des Słubicer Uniwersyteckie Liceum Ogólnokształcące.</p>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="sf-slide" data-index="3">
+        <img src="images/sf4-cover.jpg" alt="Spannungsfelder IV – Lüge und Wahrheit" class="sf-cover"
+             onerror="this.style.display='none'">
+        <div class="sf-slide-header">
+          <h2>Spannungsfelder IV</h2>
+          <div class="sf-theme">»Lüge und Wahrheit«</div>
+          <div class="sf-date">27. &amp; 28. September 2024 · Atrium des Frankfurter Rathauses</div>
+        </div>
+        <div class="divider"></div>
+        <div class="sf-body">
+          <p>Wir leben in Zeiten, in denen die mächtigsten Politiker unverblümt die Wahrheit verdrehen und Lügen zu »alternativen Fakten« ernennen, unbequeme Fakten in den Sozialen Medien zu »Fake News« umgedeutet werden und es immer schwieriger wird, Lüge und Wahrheit auseinanderzuhalten. Schön wäre es da, gäbe es eine absolute Wahrheit, an die man sich halten kann.</p>
+          <p>Der Rockstar Jimmy Hendrix meinte, diese Wahrheit in der Musik gefunden zu haben und sagte: »Musik lügt nicht.« Ob er damit richtiglag, haben wir mit Schülerinnen und Schülern des Frankfurter Karl-Liebknecht-Gymnasiums, des Lyzeums Słubice und mit Musik von Schostakowitsch, Massenet, Mozart u.a. untersuchen.</p>
+          <p>Bei diesem Education-Projekt wurde aber auch erneut ein Werk des jungen englischen Komponisten Alexander Papp uraufgeführt.</p>
+
+          <a href="https://youtu.be/wab7tSsdbjU" target="_blank" rel="noopener" class="sf-yt-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/>
+            </svg>
+            Projekt auf YouTube ansehen
+          </a>
+
+          <div class="sf-section-title">Gefördert durch</div>
+          <p class="sf-sponsor-note">»Spannungsfelder IV – Lüge und Wahrheit« wurde gefördert durch:</p>
+          <div class="sf-sponsors">
+            <img src="images/sf4-interreg.png" alt="Interreg Deutschland-Nederland" onerror="this.style.display='none'">
+            <img src="images/sf4-minerva.png" alt="Minerva Stiftung" onerror="this.style.display='none'">
+            <img src="images/sf4-sparkasse.png" alt="Sparkasse Oder-Spree" onerror="this.style.display='none'">
+            <img src="images/sf4-landbrandenburg.png" alt="Land Brandenburg" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="sf-slide" data-index="4">
+        <img src="images/sf5-cover.jpg" alt="Spannungsfelder V – Angst und Mut" class="sf-cover"
+             onerror="this.style.display='none'">
+        <div class="sf-slide-header">
+          <h2>Spannungsfelder V</h2>
+          <div class="sf-theme">»Angst und Mut«</div>
+          <div class="sf-date">22. November 2025, 15:00 &amp; 16:45 Uhr · Atrium des Frankfurter Rathauses</div>
+        </div>
+        <div class="divider"></div>
+        <div class="sf-body">
+          <p>Angst ist etwas zum Abgewöhnen. Angst braucht kein Mensch. Angstfrei und mutig zu sein, das ist, was zählt. Ist doch richtig – oder? Das Leben sagt: falsch. Das Leben sagt, Mut und Angst gehören zusammen.</p>
+          <p>Angst ist die Kontrolllampe in unserem Kopf. Sie leuchtet rot auf, wenn etwas nicht in Ordnung ist, wenn Gefahr droht, wir zu leichtsinnig werden, ein zu hohes Risiko eingehen. Wenn die Angst aber zu groß wird, wenn sie die Kontrolle übernehmen will und wir uns von ihr dirigieren lassen – dann hilft nur eins: Mut.</p>
+          <p>Mut brauchen wir, um uns aus der Deckung zu wagen, um unsere Meinung, unsere Ideale, unsere Freiheit zu verteidigen. Mut macht, dass wir unseren Ängsten nicht hilflos ausgeliefert sind.</p>
+          <p>Wie Mut und Angst zusammengehören, dass Angst überall lauert, wie man sich von ihr nicht lähmen lässt und dass man Mut trainieren kann wie einen Muskel, wollen wir bei diesem Education-Projekt mit deutschen und polnischen Jugendlichen erforschen und als multimediales Stück auf die Bühne bringen: choreographisch, pantomimisch, zeichnerisch, filmisch, rhetorisch.</p>
+          <p>Dazu spielen wir Musik von George Antheil, Maurice Ravel, Leonard Bernstein und Jaques Ibert. Es werden Texte gelesen, die die beteiligten Schülerinnen und Schüler zum Thema Mut und Angst selbst verfasst haben.</p>
+
+          <div class="info-box">
+            <p><strong>Eintritt frei</strong> – wir bitten vorab um Reservierung unter <a href="mailto:info@bsof.de">info@bsof.de</a></p>
+          </div>
+
+          <p class="sf-credits">Die musikalische Leitung liegt in den Händen von Howard Griffiths.</p>
+
+          <div class="sf-section-title">Gefördert durch</div>
+          <p class="sf-sponsor-note">»Spannungsfelder V« wurde gefördert durch den Klein-Projekte-Fonds von Interreg Brandenburg-Polska / Euroregion PRO EUROPA VIADRINA.</p>
+          <div class="sf-sponsors">
+            <img src="images/sf5-interreg.png" alt="Interreg Brandenburg-Polska" onerror="this.style.display='none'">
+            <img src="images/sf5-fundusz.png" alt="Fundusz Małych Projektów" onerror="this.style.display='none'">
+            <img src="images/sf5-euroregion.png" alt="Euroregion PRO EUROPA VIADRINA" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.sf-slider -->
+
+    <!-- ── Navigation ── -->
+    <div class="sf-nav">
+      <button class="sf-nav-btn" id="sf-prev" aria-label="Vorheriges Projekt">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        Zurück
+      </button>
+
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;">
+        <div class="sf-dots" id="sf-dots"></div>
+        <div class="sf-counter" id="sf-counter">1 / 5</div>
+      </div>
+
+      <button class="sf-nav-btn" id="sf-next" aria-label="Nächstes Projekt">
+        Weiter
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </button>
     </div>
 
-    <div class="info-box">
-      <p><strong>Förderung durch den Förderverein BSOF:</strong> Alle Konzerte der
-      Spannungsfelder-Reihe werden durch den Förderverein mitfinanziert. Mitglieder
-      erhalten bevorzugten Zugang und werden persönlich eingeladen.</p>
+    <!-- ── CTA ── -->
+    <div style="margin-top:3rem; padding-top:2rem; border-top:1px solid #ede7dd;">
+      <h2 style="font-size:1.3rem; margin-bottom:0.75rem;">Mitmachen &amp; Unterstützen</h2>
+      <p style="color:var(--mid); line-height:1.8; margin-bottom:1.25rem;">
+        Als Mitglied des Fördervereins unterstützen Sie Projekte wie die Spannungsfelder-Reihe
+        und ermöglichen, dass Kinder und Jugendliche in der Region weiterhin
+        solche einzigartigen Begegnungen mit Musik und Kunst erleben können.
+      </p>
+      <a href="index.html#mitglied-werden" class="btn btn-primary">Jetzt Mitglied werden</a>
     </div>
-
-    <h2>Mitmachen &amp; Unterstützen</h2>
-    <p>
-      Als Mitglied des Fördervereins unterstützen Sie direkt Konzerte wie diese und
-      erhalten exklusive Einladungen zu allen Spannungsfelder-Veranstaltungen.
-    </p>
-    <a href="index.html#mitglied-werden" class="btn btn-primary">Jetzt Mitglied werden</a>
 
   </div>
 </main>
+
+<script>
+  (function () {
+    const slides = Array.from(document.querySelectorAll('.sf-slide'));
+    const dotsContainer = document.getElementById('sf-dots');
+    const counter = document.getElementById('sf-counter');
+    const btnPrev = document.getElementById('sf-prev');
+    const btnNext = document.getElementById('sf-next');
+    let current = 0;
+
+    // Build dots
+    slides.forEach(function (_, i) {
+      const dot = document.createElement('button');
+      dot.className = 'sf-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Projekt ' + (i + 1));
+      dot.addEventListener('click', function () { goTo(i); });
+      dotsContainer.appendChild(dot);
+    });
+
+    function goTo(index) {
+      slides[current].classList.remove('active');
+      dotsContainer.children[current].classList.remove('active');
+      current = index;
+      slides[current].classList.add('active');
+      dotsContainer.children[current].classList.add('active');
+      counter.textContent = (current + 1) + ' / ' + slides.length;
+      btnPrev.disabled = current === 0;
+      btnNext.disabled = current === slides.length - 1;
+      window.scrollTo({ top: document.querySelector('.sf-slider').offsetTop - 100, behavior: 'smooth' });
+    }
+
+    btnPrev.addEventListener('click', function () { if (current > 0) goTo(current - 1); });
+    btnNext.addEventListener('click', function () { if (current < slides.length - 1) goTo(current + 1); });
+
+    // Init state
+    btnPrev.disabled = true;
+    counter.textContent = '1 / ' + slides.length;
+  })();
+</script>
 
 </body>
 </html>

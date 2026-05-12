@@ -48,11 +48,23 @@
   - ~200 Zeilen totes CSS entfernt (`.mitglied-tiers`, `.tier-*`, `.spenden-grid`, `.spenden-amounts`, `.spenden-form`, `.kontakt-form`, `.beitritt-form`, `.mitglied-intro`, `.hero-bg`, `.pdf-download`, `.wave-divider` u. a.)
 - **Inline-`<style>`-Block** aus `index.html <head>` vollständig in `css/style.css` überführt
 
+**Runde 5 – Spannungsfelder-Slider:**
+- `projekt-spannungsfelder.html` **vollständig neu gebaut** als Slider-Seite mit allen 5 Projekten:
+  - SF I „Musik und Technik" (23.9.2021)
+  - SF II „Orient meets Occident" (1.5.2022)
+  - SF III „Recht und Gerechtigkeit" (27.4.2023)
+  - SF IV „Lüge und Wahrheit" (27./28.9.2024) inkl. YouTube-Link und Sponsor-Logos
+  - SF V „Angst und Mut" (22.11.2025) inkl. Reservierungsinfo und Sponsor-Logos
+  - Pfeil-Navigation (Zurück/Weiter), Punkte-Indikator, Zähler (1/5)
+  - Sponsor-Logos als Platzhalter (Dateipfade vorbereitet, Bilder noch einzupflegen)
+- Spannungsfelder-Kachel in `index.html`: Tag von „Eigenes Projekt" → **„Förderung"**, Beschreibungstext angepasst
+
 ## Aktueller Stand
 
 Voll funktionsfähige One-Page-Website (`index.html`) mit:
 - Navigation, Hero mit Text-Label + Slideshow, Über uns, Ziele, Projekte (5 Kacheln), Mitglied werden, Spenden, Grußwort, Kontakt, Footer
 - 5 Projekt-Detailseiten mit einheitlichem Layout und Zurück-Button
+- `projekt-spannungsfelder.html` als Slider mit allen 5 SF-Projekten
 - `impressum.html` und `datenschutz.html` korrekt befüllt
 
 **Noch offen:**
