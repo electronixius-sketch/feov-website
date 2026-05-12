@@ -17,7 +17,7 @@
   --white:      #FFFFFF;
   --border:     #D8D0C4;
 
-  --font-serif:  'Georgia', 'Times New Roman', serif;
+  --font-serif:  'EB Garamond', 'Georgia', 'Times New Roman', serif;
   --font-sans:   'Segoe UI', system-ui, -apple-system, sans-serif;
 
   --nav-h: 72px;
@@ -25,7 +25,7 @@
   --max-w: 1200px;
 }
 
-html { scroll-behavior: smooth; font-size: 16px; }
+html { font-size: 16px; }
 
 body {
   font-family: var(--font-sans);
@@ -45,7 +45,11 @@ ul { list-style: none; }
 }
 
 /* ── Typography ── */
-h1, h2, h3 { font-family: var(--font-serif); line-height: 1.15; }
+h1, h2, h3,
+.grusswort-quote,
+.footer-col h5,
+.ueber-image-badge { font-family: var(--font-serif); line-height: 1.15; }
+
 h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 400; }
 .hero-content h1 { font-size: clamp(3.2rem, 9vw, 7.5rem); line-height: 1.05; }
 h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 400; }
@@ -107,9 +111,7 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.05rem); color: var(--mid); }
   border-bottom: 1px solid rgba(0,0,0,0.15);
   transition: box-shadow 0.3s;
 }
-.site-nav.scrolled {
-  box-shadow: 0 2px 20px rgba(0,0,0,0.25);
-}
+.site-nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.25); }
 .nav-inner {
   height: 100%;
   display: flex;
@@ -123,10 +125,7 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.05rem); color: var(--mid); }
   gap: 0.75rem;
   flex-shrink: 0;
 }
-.nav-logo img {
-  height: 44px;
-  width: auto;
-}
+.nav-logo img { height: 44px; width: auto; }
 .nav-links {
   display: flex;
   align-items: center;
@@ -161,7 +160,6 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.05rem); color: var(--mid); }
   background: var(--cream);
   border-color: var(--cream);
 }
-
 .nav-hamburger {
   display: none;
   flex-direction: column;
@@ -191,21 +189,7 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.05rem); color: var(--mid); }
   overflow: hidden;
   background: var(--dark);
 }
-/* hero-bg kept for fallback */
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  opacity: 0.45;
-}
-
-/* ── Hero Slideshow ── */
-.hero-slides {
-  position: absolute;
-  inset: 0;
-}
+.hero-slides { position: absolute; inset: 0; }
 .hero-slide {
   position: absolute;
   inset: 0;
@@ -230,13 +214,7 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.05rem); color: var(--mid); }
   z-index: 2;
   color: var(--white);
 }
-.hero-logo {
-  height: 90px;
-  width: auto;
-  opacity: 0.65;
-  margin-bottom: 1.5rem;
-  display: block;
-}
+.hero-content .section-label { color: rgba(255,255,255,0.7); }
 .hero-content h1 {
   color: var(--white);
   max-width: 800px;
@@ -268,8 +246,21 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.05rem); color: var(--mid); }
 .hero-scroll svg { width: 20px; height: 20px; }
 @keyframes bounce {
   0%,100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(8px); }
+  50%      { transform: translateX(-50%) translateY(8px); }
 }
+
+/* ── Wave Decoration ── */
+.wave-deco {
+  position: absolute;
+  right: -2%;
+  top: 8%;
+  width: min(48%, 520px);
+  opacity: 0.07;
+  z-index: 1;
+  pointer-events: none;
+  color: var(--white);
+}
+.wave-deco svg { width: 100%; height: auto; }
 
 /* ── Intro Strip ── */
 .intro-strip {
@@ -313,9 +304,7 @@ section { padding: var(--section-pad) 0; }
   gap: clamp(3rem, 6vw, 6rem);
   align-items: center;
 }
-.ueber-image {
-  position: relative;
-}
+.ueber-image { position: relative; }
 .ueber-image img {
   width: 100%;
   aspect-ratio: 4/3;
@@ -331,6 +320,15 @@ section { padding: var(--section-pad) 0; }
   font-family: var(--font-serif);
   text-align: center;
   line-height: 1.2;
+}
+.ueber-image-badge em.badge-since {
+  font-style: normal;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  display: block;
+  margin-bottom: 0.15rem;
 }
 .ueber-image-badge strong { display: block; font-size: 2.5rem; }
 .ueber-image-badge span { font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; }
@@ -371,7 +369,7 @@ section { padding: var(--section-pad) 0; }
 .projekte { background: var(--cream); }
 .projekte-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 .projekt-card {
@@ -425,7 +423,7 @@ section { padding: var(--section-pad) 0; }
   text-decoration: none;
 }
 .projekt-link:hover { gap: 0.7rem; }
-/* Stretched link: ::after covers the entire .projekt-card (position:relative + overflow:hidden) */
+/* Stretched link – ::after covers the entire .projekt-card */
 .projekt-link::after {
   content: '';
   position: absolute;
@@ -438,88 +436,29 @@ section { padding: var(--section-pad) 0; }
 .mitglied .section-header h2 { color: var(--white); }
 .mitglied .section-label { color: rgba(255,255,255,0.5); }
 .mitglied .divider { background: var(--red-light); }
-.mitglied-intro { color: rgba(255,255,255,0.75); max-width: 640px; margin-bottom: 3rem; }
-.mitglied-tiers {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-bottom: 3rem;
+
+/* ── Beitrittsbereich ── */
+.beitritt-fee {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-left: 3px solid var(--red-light);
+  padding: 1.5rem;
+  margin: 1.75rem 0;
 }
-.tier-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  padding: 2rem;
-  position: relative;
-  transition: background 0.25s, border-color 0.25s;
-}
-.tier-card:hover { background: rgba(255,255,255,0.08); }
-.tier-card.featured {
-  background: var(--red);
-  border-color: var(--red);
-}
-.tier-badge {
-  position: absolute;
-  top: -1px; right: 2rem;
-  background: var(--white);
-  color: var(--red);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 0.3rem 0.75rem;
-}
-.tier-name {
+.beitritt-fee .fee-amount {
   font-family: var(--font-serif);
-  font-size: 1.3rem;
+  font-size: 3rem;
   color: var(--white);
-  margin-bottom: 0.5rem;
+  line-height: 1;
 }
-.tier-price {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 0.25rem;
+.beitritt-fee .fee-period { color: rgba(255,255,255,0.5); font-size: 0.9rem; }
+.beitritt-fee .fee-note { color: rgba(255,255,255,0.6); font-size: 0.85rem; margin-top: 0.5rem; }
+.beitritt-benefits { display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 1.75rem; }
+.beitritt-benefit {
+  display: flex; align-items: flex-start; gap: 0.6rem;
+  color: rgba(255,255,255,0.75); font-size: 0.9rem;
 }
-.tier-price span { font-size: 1rem; font-weight: 400; opacity: 0.7; }
-.tier-desc {
-  color: rgba(255,255,255,0.6);
-  font-size: 0.85rem;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-.tier-card.featured .tier-desc { border-color: rgba(255,255,255,0.25); }
-.tier-benefits { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; }
-.tier-benefit {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
-  font-size: 0.88rem;
-  color: rgba(255,255,255,0.8);
-}
-.tier-benefit svg { width: 16px; height: 16px; flex-shrink: 0; margin-top: 2px; color: var(--red-light); }
-.tier-card.featured .tier-benefit svg { color: rgba(255,255,255,0.9); }
-.tier-btn {
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding: 0.85rem;
-  border: 1px solid rgba(255,255,255,0.3);
-  color: var(--white);
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  transition: all 0.2s;
-  background: transparent;
-  cursor: pointer;
-}
-.tier-btn:hover { background: rgba(255,255,255,0.1); }
-.tier-card.featured .tier-btn {
-  background: var(--white);
-  color: var(--red);
-  border-color: var(--white);
-}
-.tier-card.featured .tier-btn:hover { background: var(--cream); }
+.beitritt-benefit svg { width: 16px; height: 16px; flex-shrink: 0; margin-top: 3px; color: var(--red-light); }
 
 /* ── Spenden ── */
 .spenden {
@@ -534,83 +473,62 @@ section { padding: var(--section-pad) 0; }
   height: 4px;
   background: linear-gradient(to right, var(--red-dark), var(--red-light));
 }
-.spenden-grid {
+
+/* ── Bankverbindung Box ── */
+.bank-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--red);
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+.bank-box h4 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 1rem;
+}
+.bank-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+  gap: 1rem;
+}
+.bank-row:last-child { border-bottom: none; }
+.bank-row .bank-label { color: var(--light); flex-shrink: 0; }
+.bank-row .bank-value { font-weight: 600; color: var(--dark); text-align: right; font-family: monospace; letter-spacing: 0.04em; }
+.bank-note { font-size: 0.8rem; color: var(--light); margin-top: 1rem; }
+
+/* ── Simple Card Grid (Mitglied / Spenden) ── */
+.simple-card-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(3rem, 6vw, 6rem);
   align-items: start;
 }
-.spenden-amounts {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
-  margin: 1.5rem 0;
-}
-.amount-btn {
-  padding: 0.85rem 0.5rem;
-  border: 2px solid var(--border);
-  background: var(--white);
+.simple-intro {
+  color: rgba(255,255,255,0.75);
   font-size: 1rem;
-  font-weight: 600;
-  color: var(--dark);
-  cursor: pointer;
-  text-align: center;
-  transition: all 0.2s;
-  font-family: var(--font-sans);
+  margin-bottom: 1.5rem;
 }
-.amount-btn:hover, .amount-btn.active {
-  border-color: var(--red);
-  color: var(--red);
-  background: rgba(176,16,32,0.04);
+.info-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 2rem;
 }
-.spenden-form { display: flex; flex-direction: column; gap: 1rem; }
-.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-.form-group label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--dark);
-  letter-spacing: 0.03em;
-}
-.form-group input, .form-group select, .form-group textarea {
-  padding: 0.85rem 1rem;
-  border: 1px solid var(--border);
+.info-card--light {
   background: var(--white);
-  font-family: var(--font-sans);
-  font-size: 0.95rem;
-  color: var(--dark);
-  outline: none;
-  transition: border-color 0.2s;
-  border-radius: 0;
-  width: 100%;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--red);
+  padding: 2rem;
 }
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-  border-color: var(--red);
-}
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.form-note { font-size: 0.8rem; color: var(--light); }
-.spenden-info h3 { margin-bottom: 1rem; }
-.spenden-info p { margin-bottom: 1rem; }
-.spenden-facts {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-.spenden-fact {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-}
-.spenden-fact-num {
-  font-family: var(--font-serif);
-  font-size: 2rem;
-  color: var(--red);
-  line-height: 1;
-  flex-shrink: 0;
-  width: 3.5rem;
-}
-.spenden-fact-text h4 { font-size: 0.9rem; margin-bottom: 0.25rem; }
-.spenden-fact-text p { font-size: 0.85rem; }
+.info-card--light h3 { color: var(--dark); }
+.info-card--light .bank-box { border: none; border-top: none; padding: 0; }
 
 /* ── Grußwort ── */
 .grusswort { background: var(--white); }
@@ -639,7 +557,6 @@ section { padding: var(--section-pad) 0; }
 .grusswort-person h4 { font-size: 1rem; margin-bottom: 0.25rem; }
 .grusswort-person p { font-size: 0.85rem; }
 .grusswort-quote {
-  font-family: var(--font-serif);
   font-size: clamp(1.1rem, 2vw, 1.4rem);
   line-height: 1.6;
   color: var(--dark);
@@ -657,23 +574,6 @@ section { padding: var(--section-pad) 0; }
 
 /* ── Kontakt ── */
 .kontakt { background: var(--cream); }
-.kontakt-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(3rem, 6vw, 6rem);
-}
-.kontakt-info-block { margin-top: 2rem; }
-.kontakt-info-block h4 {
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--red);
-  margin-bottom: 0.5rem;
-}
-.kontakt-info-block p { font-size: 0.95rem; }
-.kontakt-info-block a { color: var(--red); text-decoration: underline; }
-.kontakt-form { display: flex; flex-direction: column; gap: 1rem; }
 .kontakt-simple {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -731,7 +631,6 @@ section { padding: var(--section-pad) 0; }
 .footer-brand img { height: 40px; margin-bottom: 1rem; }
 .footer-brand p { font-size: 0.85rem; line-height: 1.6; max-width: 220px; }
 .footer-col h5 {
-  font-family: var(--font-serif);
   font-size: 0.95rem;
   color: var(--white);
   margin-bottom: 1rem;
@@ -755,189 +654,6 @@ section { padding: var(--section-pad) 0; }
 .footer-bottom a:hover { color: rgba(255,255,255,0.7); }
 .footer-legal { display: flex; gap: 1.5rem; }
 
-/* ── Beitrittserklärung ── */
-.beitritt-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: clamp(3rem, 6vw, 6rem);
-  align-items: start;
-}
-.beitritt-info { color: rgba(255,255,255,0.8); }
-.beitritt-info p { color: rgba(255,255,255,0.7); margin-bottom: 1rem; }
-.beitritt-fee {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-left: 3px solid var(--red-light);
-  padding: 1.5rem;
-  margin: 1.75rem 0;
-}
-.beitritt-fee .fee-amount {
-  font-family: var(--font-serif);
-  font-size: 3rem;
-  color: var(--white);
-  line-height: 1;
-}
-.beitritt-fee .fee-period { color: rgba(255,255,255,0.5); font-size: 0.9rem; }
-.beitritt-fee .fee-note { color: rgba(255,255,255,0.6); font-size: 0.85rem; margin-top: 0.5rem; }
-.beitritt-benefits { display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 1.75rem; }
-.beitritt-benefit {
-  display: flex; align-items: flex-start; gap: 0.6rem;
-  color: rgba(255,255,255,0.75); font-size: 0.9rem;
-}
-.beitritt-benefit svg { width: 16px; height: 16px; flex-shrink: 0; margin-top: 3px; color: var(--red-light); }
-.pdf-download {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.75rem 1.25rem;
-  border: 1px solid rgba(255,255,255,0.25);
-  color: rgba(255,255,255,0.8);
-  font-size: 0.85rem;
-  font-weight: 500;
-  transition: all 0.2s;
-  text-decoration: none;
-}
-.pdf-download:hover { background: rgba(255,255,255,0.08); color: var(--white); border-color: rgba(255,255,255,0.4); }
-.pdf-download svg { width: 18px; height: 18px; flex-shrink: 0; }
-
-.beitritt-form-wrap {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  padding: 2rem;
-}
-.beitritt-form-title {
-  font-family: var(--font-serif);
-  font-size: 1.3rem;
-  color: var(--white);
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-.beitritt-form { display: flex; flex-direction: column; gap: 1rem; }
-.beitritt-form .form-group label { color: rgba(255,255,255,0.7); }
-.beitritt-form .form-group input {
-  background: rgba(255,255,255,0.07);
-  border-color: rgba(255,255,255,0.15);
-  color: var(--white);
-}
-.beitritt-form .form-group input::placeholder { color: rgba(255,255,255,0.3); }
-.beitritt-form .form-group input:focus { border-color: var(--red-light); background: rgba(255,255,255,0.1); }
-.beitritt-konto {
-  background: rgba(176,16,32,0.25);
-  border: 1px solid rgba(176,16,32,0.4);
-  padding: 1.25rem;
-  margin-top: 0.5rem;
-}
-.beitritt-konto h5 {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
-  margin-bottom: 0.75rem;
-}
-.beitritt-konto-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  font-size: 0.88rem;
-}
-.beitritt-konto-row span:first-child { color: rgba(255,255,255,0.5); flex-shrink: 0; }
-.beitritt-konto-row span:last-child { color: var(--white); font-weight: 600; text-align: right; font-family: monospace; letter-spacing: 0.05em; }
-.beitritt-konto-row + .beitritt-konto-row { margin-top: 0.5rem; }
-.beitritt-form .form-note { color: rgba(255,255,255,0.4); }
-
-/* ── Bankverbindung Box (Spenden) ── */
-.bank-box {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-top: 3px solid var(--red);
-  padding: 1.5rem;
-  margin-top: 2rem;
-}
-.bank-box h4 {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--red);
-  margin-bottom: 1rem;
-}
-.bank-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 0.9rem;
-  gap: 1rem;
-}
-.bank-row:last-child { border-bottom: none; }
-.bank-row .bank-label { color: var(--light); flex-shrink: 0; }
-.bank-row .bank-value { font-weight: 600; color: var(--dark); text-align: right; font-family: monospace; letter-spacing: 0.04em; }
-.bank-note { font-size: 0.8rem; color: var(--light); margin-top: 1rem; }
-
-/* ── Simple Card Grid (Mitglied / Spenden) ── */
-.simple-card-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(3rem, 6vw, 6rem);
-  align-items: start;
-}
-.simple-intro {
-  color: rgba(255,255,255,0.75);
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-.info-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.12);
-  padding: 2rem;
-}
-.info-card--light {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-top: 3px solid var(--red);
-  padding: 2rem;
-}
-.info-card--light h3 { color: var(--dark); }
-.info-card--light .bank-box { border: none; border-top: none; padding: 0; }
-
-@media (max-width: 768px) {
-  .simple-card-grid { grid-template-columns: 1fr; }
-}
-
-/* ── Wave Decoration ── */
-.wave-deco {
-  position: absolute;
-  right: -2%;
-  top: 8%;
-  width: min(48%, 520px);
-  opacity: 0.07;
-  z-index: 1;
-  pointer-events: none;
-  color: var(--white);
-}
-.wave-deco svg { width: 100%; height: auto; }
-
-.wave-divider {
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  color: var(--red);
-}
-.wave-divider svg { display: block; width: 100%; }
-
-.section-wave-accent {
-  position: absolute;
-  right: 0; top: 0;
-  width: min(300px, 30%);
-  opacity: 0.04;
-  pointer-events: none;
-  color: var(--white);
-}
-
 /* ── Utility ── */
 .sr-only {
   position: absolute; width: 1px; height: 1px;
@@ -955,37 +671,39 @@ section { padding: var(--section-pad) 0; }
 
 /* ── Responsive ── */
 @media (max-width: 1024px) {
-  .ziele-grid { grid-template-columns: repeat(2, 1fr); }
-  .mitglied-tiers { grid-template-columns: 1fr; max-width: 440px; }
-  .footer-top { grid-template-columns: 1fr 1fr; }
+  .ziele-grid      { grid-template-columns: repeat(2, 1fr); }
+  .projekte-grid   { grid-template-columns: repeat(2, 1fr); }
+  .footer-top      { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 768px) {
   :root { --nav-h: 64px; }
-  .nav-links { display: none; flex-direction: column; position: absolute;
+
+  .nav-links {
+    display: none; flex-direction: column; position: absolute;
     top: var(--nav-h); left: 0; right: 0;
     background: var(--red); padding: 1.5rem 1.5rem;
     border-bottom: 1px solid rgba(255,255,255,0.15);
-    gap: 1.25rem; box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+    gap: 1.25rem; box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  }
   .nav-links.open { display: flex; }
-  .nav-cta { display: none; }
-  .nav-hamburger { display: flex; }
+  .nav-cta        { display: none; }
+  .nav-hamburger  { display: flex; }
 
-  .ueber-grid, .spenden-grid, .grusswort-inner,
-  .kontakt-grid, .kontakt-simple, .projekte-grid, .beitritt-grid { grid-template-columns: 1fr; }
+  .ueber-grid, .grusswort-inner,
+  .kontakt-simple, .projekte-grid,
+  .simple-card-grid { grid-template-columns: 1fr; }
+
   .ueber-image-badge { bottom: -1rem; right: -0.5rem; }
   .ziele-grid { grid-template-columns: 1fr; }
-  .spenden-amounts { grid-template-columns: repeat(3, 1fr); }
   .footer-top { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1/-1; }
   .intro-strip-inner { flex-direction: column; text-align: center; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; justify-content: center; }
-  .form-row { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
-  .footer-top { grid-template-columns: 1fr; }
-  .footer-legal { flex-direction: column; gap: 0.5rem; }
-  .mitglied-tiers { max-width: 100%; }
+  .footer-top    { grid-template-columns: 1fr; }
+  .footer-legal  { flex-direction: column; gap: 0.5rem; }
 }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lesekonzerte – Förderverein BSOF</title>
+  <title>Mini-Konzerte – Förderverein BSOF</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,6 +36,28 @@
       padding: 1.25rem 1.5rem; margin: 2rem 0;
     }
     .info-box p { margin: 0; font-size: 0.9rem; }
+    .ort-list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 1.5rem;
+    }
+    .ort-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #ede7dd;
+      color: var(--mid);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .ort-list li:last-child { border-bottom: none; }
+    .ort-list li::before {
+      content: '♩';
+      color: var(--red);
+      flex-shrink: 0;
+      margin-top: 0.1em;
+    }
   </style>
 </head>
 <body>
@@ -60,52 +82,54 @@
     </a>
 
     <div class="projekt-meta">
-      <span class="projekt-tag">Eigenes Projekt</span>
-      <span class="section-label" style="margin:0;">Literatur &amp; Musik</span>
+      <span class="projekt-tag">Unterstützung</span>
+      <span class="section-label" style="margin:0;">Musik in der Stadt</span>
     </div>
 
-    <h1>Lesekonzerte</h1>
+    <h1>Mini-Konzerte</h1>
     <div class="divider"></div>
 
-    <img src="images/projekt-lesekonzerte.jpg" alt="Lesekonzert – Literatur und Musik in der Buchhandlung Ulrich von Hutten" class="projekt-hero-img"
+    <img src="images/projekt-innenstadt.jpg" alt="Mini-Konzerte im Stadtzentrum Frankfurt (Oder)" class="projekt-hero-img"
          onerror="this.style.display='none'">
 
     <p>
-      <strong>Literatur trifft Musik:</strong> Bei unseren Lesekonzerten verbinden sich
-      Texte und Klang zu einem besonderen Erlebnis für Geist und Seele. Diese Konzerte
-      sind in der Zusammenarbeit mit der Frankfurter Buchhandlung
-      <em>Ulrich von Hutten</em> entstanden.
+      Die Konzerthalle Carl Philipp Emanuel Bach wird für rund zwei Jahre saniert.
+      Während dieser Zeit weicht das Brandenburgische Staatsorchester auf die
+      Messehallen am Stadtrand aus – weit weg vom Herzen der Stadt.
     </p>
     <p>
-      Sie erfreuen sich großer Beliebtheit und haben sich seit 2024 zu einer Art
-      „Geheim-Tipp" entwickelt. Bei einem Glas Wein entsteht in der oberen Etage
-      der Buchhandlung eine ganz besondere Atmosphäre – nah, intim und unvergesslich.
+      Damit das BSOF dennoch sichtbar und erlebbar bleibt, initiiert der Förderverein
+      <strong>Mini-Konzerte im Stadtzentrum</strong>. Kleine Besetzungen, großartige
+      Musik – mitten in Frankfurt (Oder), dort wo Menschen ihren Alltag verbringen.
     </p>
 
-    <h2>Das Format</h2>
+    <h2>Orte im Stadtzentrum</h2>
     <p>
-      Musikerinnen und Musiker des Brandenburgischen Staatsorchesters Frankfurt (Oder)
-      spielen ausgewählte Kammermusik, während literarische Texte – Prosa, Lyrik oder
-      Essay – den Abend begleiten. Beide Kunstformen treten in einen echten Dialog:
-      manchmal kontrastierend, manchmal ergänzend, immer bereichernd.
+      Die Mini-Konzerte finden an Orten statt, die das Leben in der Stadt prägen:
     </p>
+    <ul class="ort-list">
+      <li>Kleist Forum</li>
+      <li>Rathaus</li>
+      <li>Kleist-Museum</li>
+    </ul>
     <p>
-      Jede Veranstaltung ist einmalig – Programme und Texte werden eigens für jeden
-      Abend zusammengestellt. So entsteht jedes Mal ein neues, unwiederholbares Erlebnis
-      in vertrauter Umgebung.
+      Weitere Spielstätten im öffentlichen Raum sind in Planung. So bleibt das
+      Orchester auch während der Sanierungszeit präsent und zeigt: Die Musik
+      gehört zur Stadt.
     </p>
 
     <div class="info-box">
-      <p><strong>Eintritt frei – Spenden willkommen:</strong> Die Lesekonzerte finden
-      ohne Eintritt statt. Es wird um Spenden gebeten, die direkt der Fortsetzung
-      dieser Reihe zugutekommen.</p>
+      <p><strong>Unterstützung durch den Förderverein BSOF:</strong> Der Förderverein
+      trägt dazu bei, dass Mini-Konzerte in der Innenstadt organisiert und
+      durchgeführt werden können. Ihre Mitgliedschaft hilft, diese Präsenz
+      in der Stadt zu sichern.</p>
     </div>
 
     <h2>Mitmachen &amp; Unterstützen</h2>
     <p>
-      Als Mitglied des Fördervereins werden Sie persönlich zu jedem Lesekonzert eingeladen
-      und erfahren als Erste von neuen Terminen. Unterstützen Sie dieses besondere
-      Format, das Literatur und Musik in Frankfurt (Oder) zusammenbringt.
+      Werden Sie Mitglied und unterstützen Sie, dass Frankfurt (Oder) während
+      der Sanierungsphase nicht auf seine Musik verzichten muss – in den
+      Messehallen und mitten in der Stadt.
     </p>
     <a href="index.html#mitglied-werden" class="btn btn-primary">Jetzt Mitglied werden</a>
 
