@@ -200,7 +200,7 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.05rem); color: var(--mid); }
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: clamp(80px, 8vw, 120px);
+  padding-bottom: clamp(140px, 14vw, 200px);
   overflow: hidden;
   background: var(--dark);
 }
