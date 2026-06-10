@@ -223,7 +223,7 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.05rem); color: var(--mid); }
 }
 .hero-content {
   position: absolute;
-  bottom: 160px;
+  bottom: 80px;
   left: 0;
   right: 0;
   z-index: 2;
