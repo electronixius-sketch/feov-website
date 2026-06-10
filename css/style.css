@@ -199,11 +199,12 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.05rem); color: var(--mid); }
   min-height: 100dvh;
   display: flex;
   align-items: flex-end;
-  padding-bottom: clamp(160px, 14vw, 220px);
-  overflow: hidden;
+  padding-top: calc(var(--nav-h) + 2rem);
+  padding-bottom: clamp(80px, 8vw, 120px);
+  position: relative;
   background: var(--dark);
 }
-.hero-slides { position: absolute; inset: 0; }
+.hero-slides { position: absolute; inset: 0; overflow: hidden; }
 .hero-slide {
   position: absolute;
   inset: 0;
