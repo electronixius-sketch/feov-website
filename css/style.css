@@ -199,7 +199,7 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.05rem); color: var(--mid); }
   min-height: 100dvh;
   display: flex;
   align-items: flex-end;
-  padding-bottom: clamp(100px, 10vw, 140px);
+  padding-bottom: clamp(160px, 14vw, 220px);
   overflow: hidden;
   background: var(--dark);
 }
