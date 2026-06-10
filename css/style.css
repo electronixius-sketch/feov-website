@@ -198,6 +198,9 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.05rem); color: var(--mid); }
   position: relative;
   position: relative;
   min-height: 100dvh;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 160px;
   overflow: hidden;
   background: var(--dark);
 }
@@ -222,10 +225,7 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.05rem); color: var(--mid); }
   );
 }
 .hero-content {
-  position: absolute;
-  bottom: 80px;
-  left: 0;
-  right: 0;
+  position: relative;
   z-index: 2;
   color: var(--white);
 }
