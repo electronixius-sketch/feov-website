@@ -6,6 +6,7 @@
   <title>Förderverein BSOF – Brandenburgisches Staatsorchester Frankfurt</title>
   <meta name="description" content="Der Förderverein des Brandenburgischen Staatsorchesters Frankfurt (Oder) unterstützt Musikprojekte, Jugendarbeit und das kulturelle Leben in der Region.">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -601,5 +602,16 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>
