@@ -19,6 +19,19 @@ collections:
           - { label: Über uns (Absatz 1), name: ueber_p1, widget: text }
           - { label: Über uns (Absatz 2), name: ueber_p2, widget: text }
           - { label: Über uns (Absatz 3), name: ueber_p3, widget: text }
+          - { label: Unsere Ziele – Einleitung, name: ziele_intro, widget: text }
+          - { label: Ziel 1 – Titel, name: ziel1_titel, widget: string }
+          - { label: Ziel 1 – Text, name: ziel1_text, widget: text }
+          - { label: Ziel 2 – Titel, name: ziel2_titel, widget: string }
+          - { label: Ziel 2 – Text, name: ziel2_text, widget: text }
+          - { label: Ziel 3 – Titel, name: ziel3_titel, widget: string }
+          - { label: Ziel 3 – Text, name: ziel3_text, widget: text }
+          - { label: Ziel 4 – Titel, name: ziel4_titel, widget: string }
+          - { label: Ziel 4 – Text, name: ziel4_text, widget: text }
+          - { label: Ziel 5 – Titel, name: ziel5_titel, widget: string }
+          - { label: Ziel 5 – Text, name: ziel5_text, widget: text }
+          - { label: Ziel 6 – Titel, name: ziel6_titel, widget: string }
+          - { label: Ziel 6 – Text, name: ziel6_text, widget: text }
           - { label: Grußwort (Absatz 1), name: gruss_p1, widget: text }
           - { label: Grußwort (Absatz 2), name: gruss_p2, widget: text }
           - { label: Grußwort (Absatz 3), name: gruss_p3, widget: text }
