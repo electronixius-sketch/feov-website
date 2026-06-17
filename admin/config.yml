@@ -40,6 +40,29 @@ collections:
           - { label: Kontakt – Website, name: kontakt_website, widget: string }
           - { label: Kontakt – Adresse, name: kontakt_adresse, widget: text }
 
+  - name: neue_projekte
+    label: Neue Projekte
+    files:
+      - name: projekte_liste
+        label: Projektliste
+        file: content/projekte-cms.json
+        format: json
+        fields:
+          - name: projekte
+            label: Projekte
+            widget: list
+            summary: "{{fields.titel}}"
+            fields:
+              - { label: Titel, name: titel, widget: string }
+              - { label: "URL-Name (Slug)", name: slug, widget: string, hint: "Nur Kleinbuchstaben und Bindestriche, z. B. hauskonzerte" }
+              - { label: Tag, name: tag, widget: string, default: "Eigenes Projekt" }
+              - { label: "Kurzbeschreibung (für Kachel)", name: kurzbeschreibung, widget: text }
+              - { label: "Einleitung (Absatz 1)", name: intro1, widget: text }
+              - { label: "Einleitung (Absatz 2, optional)", name: intro2, widget: text, required: false }
+              - { label: Info-Box, name: infobox, widget: text }
+              - { label: "Mitmachen & Unterstützen", name: mitmachen, widget: text }
+              - { label: Bild, name: bild, widget: image, required: false }
+
   - name: projekte
     label: Projekte
     files:

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Projekt – Förderverein BSOF</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    h1, h2, h3 { font-family: 'EB Garamond', Georgia, serif; }
+    .projekt-page { padding-top: calc(var(--nav-h) + 60px); padding-bottom: 80px; }
+    .projekt-hero-img {
+      width: 100%; max-height: 420px;
+      object-fit: cover;
+      margin-bottom: 3rem;
+      display: block;
+    }
+    .projekt-meta {
+      display: flex; align-items: center; gap: 1rem;
+      margin-bottom: 1.5rem; flex-wrap: wrap;
+    }
+    .projekt-page h1 { margin-bottom: 1rem; }
+    .projekt-page .divider { margin: 1.5rem 0; }
+    .projekt-page p { color: var(--mid); line-height: 1.8; margin-bottom: 1rem; }
+    .projekt-page h2 { font-size: 1.4rem; margin: 2.5rem 0 0.75rem; color: var(--dark); }
+    .back-link {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: var(--red); font-size: 0.88rem; font-weight: 600;
+      text-decoration: none; margin-bottom: 2.5rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+    .info-box {
+      background: var(--cream); border-left: 3px solid var(--red);
+      padding: 1.25rem 1.5rem; margin: 2rem 0;
+    }
+    .info-box p { margin: 0; font-size: 0.9rem; }
+    #not-found { text-align: center; padding: 4rem 0; color: var(--mid); }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav scrolled">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/Logo%20ohne%20Hintergrund.svg" alt="Förderverein BSOF Logo" style="height:64px;width:auto;">
+    </a>
+    <a href="index.html#projekte" class="btn btn-outline-dark" style="font-size:0.85rem;padding:0.6rem 1.25rem;">← Alle Projekte</a>
+  </div>
+</nav>
+
+<main class="projekt-page">
+  <div class="container" style="max-width:780px;">
+
+    <a href="index.html#projekte" class="back-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="19 12 5 12"/><polyline points="12 5 5 12 12 19"/>
+      </svg>
+      Zurück zu allen Projekten
+    </a>
+
+    <div id="projekt-inhalt" style="display:none;">
+      <div class="projekt-meta">
+        <span class="projekt-tag" id="projekt-tag"></span>
+      </div>
+
+      <h1 id="projekt-titel"></h1>
+      <div class="divider"></div>
+
+      <img id="projekt-bild" class="projekt-hero-img" alt="" style="display:none;">
+
+      <p id="projekt-intro1"></p>
+      <p id="projekt-intro2" style="display:none;"></p>
+
+      <div class="info-box">
+        <p id="projekt-infobox"></p>
+      </div>
+
+      <h2>Mitmachen &amp; Unterstützen</h2>
+      <p id="projekt-mitmachen"></p>
+
+      <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:2rem;">
+        <a href="index.html#spenden" class="btn btn-primary">Jetzt spenden</a>
+        <a href="index.html#mitglied-werden" class="btn btn-outline-dark">Mitglied werden</a>
+      </div>
+    </div>
+
+    <div id="not-found" style="display:none;">
+      <p>Dieses Projekt wurde nicht gefunden.</p>
+      <a href="index.html#projekte" class="btn btn-outline-dark" style="margin-top:1rem;">Alle Projekte ansehen</a>
+    </div>
+
+  </div>
+</main>
+
+<script>
+(async function() {
+  var params = new URLSearchParams(window.location.search);
+  var slug = params.get('slug');
+  if (!slug) { document.getElementById('not-found').style.display = 'block'; return; }
+
+  try {
+    var res = await fetch('content/projekte-cms.json');
+    if (!res.ok) throw new Error();
+    var data = await res.json();
+    var projekt = (data.projekte || []).find(function(p) { return p.slug === slug; });
+
+    if (!projekt) { document.getElementById('not-found').style.display = 'block'; return; }
+
+    document.getElementById('page-title').textContent = projekt.titel + ' – Förderverein BSOF';
+    document.getElementById('projekt-tag').textContent = projekt.tag || 'Projekt';
+    document.getElementById('projekt-titel').textContent = projekt.titel;
+    document.getElementById('projekt-intro1').innerHTML = renderMD(projekt.intro1 || '');
+
+    if (projekt.intro2) {
+      var p2 = document.getElementById('projekt-intro2');
+      p2.innerHTML = renderMD(projekt.intro2);
+      p2.style.display = '';
+    }
+
+    document.getElementById('projekt-infobox').innerHTML = renderMD(projekt.infobox || '');
+    document.getElementById('projekt-mitmachen').innerHTML = renderMD(projekt.mitmachen || '');
+
+    if (projekt.bild) {
+      var img = document.getElementById('projekt-bild');
+      img.src = projekt.bild;
+      img.alt = projekt.titel;
+      img.style.display = '';
+    }
+
+    document.getElementById('projekt-inhalt').style.display = '';
+  } catch(e) {
+    document.getElementById('not-found').style.display = 'block';
+  }
+
+  function renderMD(text) {
+    return text
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.+?)\*/g, '<em>$1</em>')
+      .replace(/\n/g, '<br>');
+  }
+})();
+</script>
+</body>
+</html>
