@@ -1,0 +1,62 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: de
+
+media_folder: images
+public_folder: /images
+
+collections:
+  - name: projekte
+    label: Projekte
+    files:
+      - name: lesekonzerte
+        label: Lesekonzerte
+        file: content/lesekonzerte.yml
+        fields:
+          - { label: Titel, name: title, widget: string }
+          - { label: Einleitung, name: intro, widget: text }
+          - { label: Beschreibung, name: description, widget: markdown }
+
+      - name: minikonzerte
+        label: Mini-Konzerte
+        file: content/minikonzerte.yml
+        fields:
+          - { label: Titel, name: title, widget: string }
+          - { label: Einleitung, name: intro, widget: text }
+          - { label: Beschreibung, name: description, widget: markdown }
+
+      - name: auftragswerke
+        label: Auftragswerke
+        file: content/auftragswerke.yml
+        fields:
+          - { label: Titel, name: title, widget: string }
+          - { label: Einleitung, name: intro, widget: text }
+          - { label: Beschreibung, name: description, widget: markdown }
+
+      - name: education
+        label: Education
+        file: content/education.yml
+        fields:
+          - { label: Titel, name: title, widget: string }
+          - { label: Einleitung, name: intro, widget: text }
+          - { label: Beschreibung, name: description, widget: markdown }
+
+  - name: startseite
+    label: Startseite
+    files:
+      - name: hero
+        label: Hero-Bereich
+        file: content/hero.yml
+        fields:
+          - { label: Überschrift, name: heading, widget: string }
+          - { label: Untertext, name: subtext, widget: text }
+
+      - name: kontakt
+        label: Kontakt
+        file: content/kontakt.yml
+        fields:
+          - { label: E-Mail, name: email, widget: string }
+          - { label: Website BSOF, name: website, widget: string }
+          - { label: Adresse, name: address, widget: text }
