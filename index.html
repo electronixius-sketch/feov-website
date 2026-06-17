@@ -118,21 +118,9 @@
         <span class="section-label">Über den Förderverein</span>
         <h2>Enthusiasmus für Kultur. Für Musik. Für unser Orchester.</h2>
         <div class="divider"></div>
-        <p>
-          Der Förderverein des Brandenburgischen Staatsorchesters Frankfurt (Oder) e. V.
-          ist der unabhängige Freundeskreis des BSOF. Wir unterstützen das Orchester
-          dort, wo öffentliche Mittel nicht hinreichen: bei besonderen Projekten,
-          der Kinder- und Jugendarbeit und der Präsenz des Orchesters in der Stadtgesellschaft.
-        </p>
-        <p>
-          Als Mitglied sind Sie Teil einer Gemeinschaft, die Orchesterkultur in Frankfurt (Oder)
-          lebendig hält. Sie erhalten Einblicke hinter die Kulissen, bevorzugten Kartenzugang
-          und Einladungen zu exklusiven Veranstaltungen.
-        </p>
-        <p>
-          Unser Antrieb ist einfach: die Überzeugung, dass ein Sinfonieorchester zum Herzschlag
-          einer Stadt gehört – und dass wir gemeinsam mehr erreichen als allein.
-        </p>
+        <p data-cms-key="ueber_p1">Der Förderverein des Brandenburgischen Staatsorchesters Frankfurt (Oder) e. V. ist der unabhängige Freundeskreis des BSOF. Wir unterstützen das Orchester dort, wo öffentliche Mittel nicht hinreichen: bei besonderen Projekten, der Kinder- und Jugendarbeit und der Präsenz des Orchesters in der Stadtgesellschaft.</p>
+        <p data-cms-key="ueber_p2">Als Mitglied sind Sie Teil einer Gemeinschaft, die Orchesterkultur in Frankfurt (Oder) lebendig hält. Sie erhalten Einblicke hinter die Kulissen, bevorzugten Kartenzugang und Einladungen zu exklusiven Veranstaltungen.</p>
+        <p data-cms-key="ueber_p3">Unser Antrieb ist einfach: die Überzeugung, dass ein Sinfonieorchester zum Herzschlag einer Stadt gehört – und dass wir gemeinsam mehr erreichen als allein.</p>
         <a href="#ziele" class="btn btn-outline-dark">Unsere Ziele</a>
       </div>
     </div>
@@ -493,15 +481,10 @@
           – Albert Einstein
         </blockquote>
         <div class="grusswort-text">
-          <p>Liebe Musikbegeisterte und Freunde des Brandenburgischen Staatsorchesters Frankfurt,</p>
-          <p>dass die Kultur in Schwierigkeiten steckt, ist kein Geheimnis. Unser Staatsorchester
-             weiß das nur zu gut. Wir sind angetreten, Möglichkeiten zu finden. Zu unterstützen,
-             zu helfen, Impuls- und Lobbyarbeit zu leisten.</p>
-          <p>Unser Antrieb? Enthusiasmus für die Kultur. Für die Musik. Für UNSER Staatsorchester –
-             und damit für unsere Stadt Frankfurt (Oder). Helfen Sie mit?</p>
-          <p>Ein Förderverein lebt von Menschen, die anpacken. Die nicht nur zuhören, sondern
-             mitgestalten. Werden Sie Teil dieser Gemeinschaft – als Mitglied, als Spender
-             oder als aktive Helferin und aktiver Helfer.</p>
+          <p data-cms-key="gruss_p1">Liebe Musikbegeisterte und Freunde des Brandenburgischen Staatsorchesters Frankfurt,</p>
+          <p data-cms-key="gruss_p2">dass die Kultur in Schwierigkeiten steckt, ist kein Geheimnis. Unser Staatsorchester weiß das nur zu gut. Wir sind angetreten, Möglichkeiten zu finden. Zu unterstützen, zu helfen, Impuls- und Lobbyarbeit zu leisten.</p>
+          <p data-cms-key="gruss_p3">Unser Antrieb? Enthusiasmus für die Kultur. Für die Musik. Für UNSER Staatsorchester – und damit für unsere Stadt Frankfurt (Oder). Helfen Sie mit?</p>
+          <p data-cms-key="gruss_p4">Ein Förderverein lebt von Menschen, die anpacken. Die nicht nur zuhören, sondern mitgestalten. Werden Sie Teil dieser Gemeinschaft – als Mitglied, als Spender oder als aktive Helferin und aktiver Helfer.</p>
         </div>
         <p class="grusswort-sig">Herzlich,<br><strong>Dr. Axel Berg</strong><br>1. Vorsitzender FV BSOF</p>
       </div>
@@ -527,17 +510,17 @@
     <div class="kontakt-simple fade-in">
       <div class="kontakt-card">
         <h4>Anschrift</h4>
-        <p>Freunde und Förderer des BSOF e. V.<br>
+        <p data-cms-key="kontakt_adresse">Freunde und Förderer des BSOF e. V.<br>
            Logenstraße 8<br>
            D – 15230 Frankfurt (Oder)</p>
       </div>
       <div class="kontakt-card kontakt-card--centered">
         <h4>E-Mail</h4>
-        <a class="kontakt-card-link" href="mailto:foerderverein@bsof.de">foerderverein@bsof.de</a>
+        <a class="kontakt-card-link" data-cms-key="kontakt_email" href="mailto:foerderverein@bsof.de">foerderverein@bsof.de</a>
       </div>
       <div class="kontakt-card kontakt-card--centered">
         <h4>Hauptwebsite des BSOF</h4>
-        <a class="kontakt-card-link" href="https://www.bsof.de" target="_blank" rel="noopener">www.bsof.de</a>
+        <a class="kontakt-card-link" data-cms-key="kontakt_website" href="https://www.bsof.de" target="_blank" rel="noopener">www.bsof.de</a>
       </div>
     </div>
   </div>
@@ -613,5 +596,7 @@
     });
   }
 </script>
+<script src="js/cms-loader.js"></script>
+<script>loadCMSContent('content/startseite.json');</script>
 </body>
 </html>

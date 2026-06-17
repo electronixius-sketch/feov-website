@@ -8,6 +8,25 @@ media_folder: images
 public_folder: /images
 
 collections:
+  - name: startseite
+    label: Startseite
+    files:
+      - name: startseite
+        label: Startseite – Inhalte
+        file: content/startseite.json
+        format: json
+        fields:
+          - { label: Über uns (Absatz 1), name: ueber_p1, widget: text }
+          - { label: Über uns (Absatz 2), name: ueber_p2, widget: text }
+          - { label: Über uns (Absatz 3), name: ueber_p3, widget: text }
+          - { label: Grußwort (Absatz 1), name: gruss_p1, widget: text }
+          - { label: Grußwort (Absatz 2), name: gruss_p2, widget: text }
+          - { label: Grußwort (Absatz 3), name: gruss_p3, widget: text }
+          - { label: Grußwort (Absatz 4), name: gruss_p4, widget: text }
+          - { label: Kontakt – E-Mail, name: kontakt_email, widget: string }
+          - { label: Kontakt – Website, name: kontakt_website, widget: string }
+          - { label: Kontakt – Adresse, name: kontakt_adresse, widget: text }
+
   - name: projekte
     label: Projekte
     files:
