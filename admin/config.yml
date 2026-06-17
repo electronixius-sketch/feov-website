@@ -13,50 +13,55 @@ collections:
     files:
       - name: lesekonzerte
         label: Lesekonzerte
-        file: content/lesekonzerte.yml
+        file: content/lesekonzerte.json
+        format: json
         fields:
           - { label: Titel, name: title, widget: string }
-          - { label: Einleitung, name: intro, widget: text }
-          - { label: Beschreibung, name: description, widget: markdown }
+          - { label: Einleitung (Absatz 1), name: intro1, widget: text }
+          - { label: Einleitung (Absatz 2), name: intro2, widget: text }
+          - { label: Das Format (Absatz 1), name: format1, widget: text }
+          - { label: Das Format (Absatz 2), name: format2, widget: text }
+          - { label: Info-Box, name: infobox, widget: text }
+          - { label: Mitmachen & Unterstützen, name: mitmachen, widget: text }
 
       - name: minikonzerte
         label: Mini-Konzerte
-        file: content/minikonzerte.yml
+        file: content/minikonzerte.json
+        format: json
         fields:
           - { label: Titel, name: title, widget: string }
-          - { label: Einleitung, name: intro, widget: text }
-          - { label: Beschreibung, name: description, widget: markdown }
+          - { label: Einleitung (Absatz 1), name: intro1, widget: text }
+          - { label: Einleitung (Absatz 2), name: intro2, widget: text }
+          - { label: Orte – Einleitung, name: orte_intro, widget: string }
+          - { label: Info-Box, name: infobox, widget: text }
+          - { label: Mitmachen & Unterstützen, name: mitmachen, widget: text }
 
       - name: auftragswerke
         label: Auftragswerke
-        file: content/auftragswerke.yml
+        file: content/auftragswerke.json
+        format: json
         fields:
           - { label: Titel, name: title, widget: string }
-          - { label: Einleitung, name: intro, widget: text }
-          - { label: Beschreibung, name: description, widget: markdown }
+          - { label: Einleitung (Absatz 1), name: intro1, widget: text }
+          - { label: Einleitung (Absatz 2), name: intro2, widget: text }
+          - { label: Werk 1 – Datum, name: werk1_datum, widget: string }
+          - { label: Werk 1 – Titel, name: werk1_titel, widget: string }
+          - { label: Werk 1 – Beschreibung, name: werk1_text, widget: text }
+          - { label: Werk 2 – Datum, name: werk2_datum, widget: string }
+          - { label: Werk 2 – Titel, name: werk2_titel, widget: string }
+          - { label: Werk 2 – Beschreibung, name: werk2_text, widget: text }
+          - { label: Info-Box, name: infobox, widget: text }
+          - { label: Mitmachen & Unterstützen, name: mitmachen, widget: text }
 
       - name: education
-        label: Education
-        file: content/education.yml
+        label: Education-Projekte
+        file: content/education.json
+        format: json
         fields:
           - { label: Titel, name: title, widget: string }
-          - { label: Einleitung, name: intro, widget: text }
-          - { label: Beschreibung, name: description, widget: markdown }
-
-  - name: startseite
-    label: Startseite
-    files:
-      - name: hero
-        label: Hero-Bereich
-        file: content/hero.yml
-        fields:
-          - { label: Überschrift, name: heading, widget: string }
-          - { label: Untertext, name: subtext, widget: text }
-
-      - name: kontakt
-        label: Kontakt
-        file: content/kontakt.yml
-        fields:
-          - { label: E-Mail, name: email, widget: string }
-          - { label: Website BSOF, name: website, widget: string }
-          - { label: Adresse, name: address, widget: text }
+          - { label: Einleitung (Absatz 1), name: intro1, widget: text }
+          - { label: Einleitung (Absatz 2), name: intro2, widget: text }
+          - { label: Was die Kinder erleben – Einleitung, name: was_intro, widget: text }
+          - { label: Was die Kinder erleben – Abschluss, name: was_text, widget: text }
+          - { label: Info-Box, name: infobox, widget: text }
+          - { label: Mitmachen & Unterstützen, name: mitmachen, widget: text }

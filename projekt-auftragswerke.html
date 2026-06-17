@@ -90,54 +90,29 @@
     <img src="images/projekt-auftragswerke.jpg" alt="Auftragswerke – Uraufführungen mit dem BSOF" class="projekt-hero-img"
          onerror="this.style.display='none'">
 
-    <p>
-      Der Förderverein des Brandenburgischen Staatsorchesters Frankfurt (Oder) ermöglicht
-      die Entstehung neuer Musik: Durch die Vergabe von Kompositionsaufträgen an zeitgenössische
-      Komponistinnen und Komponisten unterstützen wir das Orchester dabei, lebendiges
-      Schaffen unmittelbar auf die Bühne zu bringen.
-    </p>
-    <p>
-      Auftragswerke sind ein Bekenntnis zur Gegenwart: Sie sorgen dafür, dass das
-      Brandenburgische Staatsorchester nicht nur das große Erbe der Klassik pflegt,
-      sondern auch aktiv an der Musikgeschichte von heute mitwirkt.
-    </p>
+    <p data-cms-key="intro1">Der Förderverein des Brandenburgischen Staatsorchesters Frankfurt (Oder) ermöglicht die Entstehung neuer Musik: Durch die Vergabe von Kompositionsaufträgen an zeitgenössische Komponistinnen und Komponisten unterstützen wir das Orchester dabei, lebendiges Schaffen unmittelbar auf die Bühne zu bringen.</p>
+    <p data-cms-key="intro2">Auftragswerke sind ein Bekenntnis zur Gegenwart: Sie sorgen dafür, dass das Brandenburgische Staatsorchester nicht nur das große Erbe der Klassik pflegt, sondern auch aktiv an der Musikgeschichte von heute mitwirkt.</p>
 
     <h2>Uraufführungen</h2>
 
     <div class="werk-card">
-      <div class="werk-meta">Uraufführung · 9. Mai 2025</div>
-      <h3>Georg Breinschmid – Alt-Wiener Ausdruckstänze</h3>
-      <p>
-        Konzerthalle Carl Philipp Emanuel Bach, Frankfurt (Oder) –
-        in Kooperation mit den Festspielen Mecklenburg-Vorpommern.
-        Der Wiener Kontrabassist und Komponist Georg Breinschmid schrieb ein Konzert,
-        das die Grenzen zwischen Klassik, Jazz und Volksmusik spielerisch aufhebt.
-      </p>
+      <div class="werk-meta" data-cms-key="werk1_datum">Uraufführung · 9. Mai 2025</div>
+      <h3 data-cms-key="werk1_titel">Georg Breinschmid – Alt-Wiener Ausdruckstänze</h3>
+      <p data-cms-key="werk1_text">Konzerthalle Carl Philipp Emanuel Bach, Frankfurt (Oder) – in Kooperation mit den Festspielen Mecklenburg-Vorpommern. Der Wiener Kontrabassist und Komponist Georg Breinschmid schrieb ein Konzert, das die Grenzen zwischen Klassik, Jazz und Volksmusik spielerisch aufhebt.</p>
     </div>
 
     <div class="werk-card">
-      <div class="werk-meta">Uraufführung · 8. Dezember 2021</div>
-      <h3>Steffen Schleiermacher – „3 Oden für Beethoven"</h3>
-      <p>
-        Philharmonie Berlin. Das Werk des Leipziger Komponisten und Pianisten
-        Steffen Schleiermacher entstand im Beethoven-Jahr und wurde vom
-        Brandenburgischen Staatsorchester Frankfurt (Oder) uraufgeführt –
-        ein Dialog zwischen Gegenwart und dem Erbe Ludwig van Beethovens.
-      </p>
+      <div class="werk-meta" data-cms-key="werk2_datum">Uraufführung · 8. Dezember 2021</div>
+      <h3 data-cms-key="werk2_titel">Steffen Schleiermacher – „3 Oden für Beethoven"</h3>
+      <p data-cms-key="werk2_text">Philharmonie Berlin. Das Werk des Leipziger Komponisten und Pianisten Steffen Schleiermacher entstand im Beethoven-Jahr und wurde vom Brandenburgischen Staatsorchester Frankfurt (Oder) uraufgeführt – ein Dialog zwischen Gegenwart und dem Erbe Ludwig van Beethovens.</p>
     </div>
 
     <div class="info-box">
-      <p><strong>Förderung durch den Förderverein BSOF:</strong> Kompositionsaufträge
-      werden durch Mitgliedsbeiträge und Spenden ermöglicht. Jede Mitgliedschaft
-      trägt direkt dazu bei, dass neue Musik entstehen und erklingen kann.</p>
+      <p data-cms-key="infobox"><strong>Förderung durch den Förderverein BSOF:</strong> Kompositionsaufträge werden durch Mitgliedsbeiträge und Spenden ermöglicht. Jede Mitgliedschaft trägt direkt dazu bei, dass neue Musik entstehen und erklingen kann.</p>
     </div>
 
     <h2>Mitmachen &amp; Unterstützen</h2>
-    <p>
-      Als Mitglied des Fördervereins ermöglichen Sie, dass das BSOF auch in Zukunft
-      neue Werke in Auftrag geben und uraufführen kann. Werden Sie Teil dieser
-      lebendigen Musikgeschichte.
-    </p>
+    <p data-cms-key="mitmachen">Als Mitglied des Fördervereins ermöglichen Sie, dass das BSOF auch in Zukunft neue Werke in Auftrag geben und uraufführen kann. Werden Sie Teil dieser lebendigen Musikgeschichte.</p>
     <div style="display:flex; gap:1rem; flex-wrap:wrap;">
       <a href="index.html#spenden" class="btn btn-primary">Jetzt spenden</a>
       <a href="index.html#mitglied-werden" class="btn btn-outline-dark">Mitglied werden</a>
@@ -146,5 +121,7 @@
   </div>
 </main>
 
+<script src="js/cms-loader.js"></script>
+<script>loadCMSContent('content/auftragswerke.json');</script>
 </body>
 </html>
