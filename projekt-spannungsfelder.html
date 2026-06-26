@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spannungsfelder – Förderverein BSOF</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -151,13 +152,17 @@
       flex-direction: column;
       gap: 0.6rem;
     }
+    .sf-gallery a { display: block; }
     .sf-gallery img {
       width: 100%;
       aspect-ratio: 1;
       object-fit: cover;
       border-radius: 3px;
       display: block;
+      cursor: zoom-in;
+      transition: opacity 0.15s;
     }
+    .sf-gallery a:hover img { opacity: 0.85; }
 
     .sf-yt-link {
       display: inline-flex;
@@ -329,9 +334,9 @@
           <img src="images/Logos%20f%C3%BCr%20SFP/spannungsfelder_i_b500.webp" alt="Spannungsfelder I – Musik und Technik" class="sf-cover"
                onerror="this.src='images/Spannungsfelder%20I/1_Spannungsfelder.jpg'">
           <div class="sf-gallery">
-            <img src="images/Spannungsfelder%20I/1_Spannungsfelder%202021%20Website.jpg" alt="Spannungsfelder I – Foto 1">
-            <img src="images/Spannungsfelder%20I/1_Spannungsfelder_EP21_061111-58%20AM%20-%20Website.jpg" alt="Spannungsfelder I – Foto 2">
-            <img src="images/Spannungsfelder%20I/Spannungsfelder%201__EP21_016710-20%20AM%20Website.jpg" alt="Spannungsfelder I – Foto 3">
+            <a href="images/Spannungsfelder%20I/1_Spannungsfelder%202021%20Website.jpg" class="glightbox" data-gallery="sf1"><img src="images/Spannungsfelder%20I/1_Spannungsfelder%202021%20Website.jpg" alt="Spannungsfelder I – Foto 1"></a>
+            <a href="images/Spannungsfelder%20I/1_Spannungsfelder_EP21_061111-58%20AM%20-%20Website.jpg" class="glightbox" data-gallery="sf1"><img src="images/Spannungsfelder%20I/1_Spannungsfelder_EP21_061111-58%20AM%20-%20Website.jpg" alt="Spannungsfelder I – Foto 2"></a>
+            <a href="images/Spannungsfelder%20I/Spannungsfelder%201__EP21_016710-20%20AM%20Website.jpg" class="glightbox" data-gallery="sf1"><img src="images/Spannungsfelder%20I/Spannungsfelder%201__EP21_016710-20%20AM%20Website.jpg" alt="Spannungsfelder I – Foto 3"></a>
           </div>
         </div>
         <div class="sf-slide-header">
@@ -375,9 +380,9 @@
           <img src="images/Logos%20f%C3%BCr%20SFP/spannungsfelder_ii_b500.webp" alt="Spannungsfelder II – Orient meets Occident" class="sf-cover"
                onerror="this.src='images/Spannungsfelder%20II/Spannungsfelder%20II.jpg'">
           <div class="sf-gallery">
-            <img src="images/Spannungsfelder%20II/BSOF_Spannungsfelder%20II%206%20Website.jpg" alt="Spannungsfelder II – Foto 1">
-            <img src="images/Spannungsfelder%20II/BSOF_Spannungsfelder%20II%208%20Website.jpg" alt="Spannungsfelder II – Foto 2">
-            <img src="images/Spannungsfelder%20II/Spannungsfelder%20II%2019%20Website.jpg" alt="Spannungsfelder II – Foto 3">
+            <a href="images/Spannungsfelder%20II/BSOF_Spannungsfelder%20II%206%20Website.jpg" class="glightbox" data-gallery="sf2"><img src="images/Spannungsfelder%20II/BSOF_Spannungsfelder%20II%206%20Website.jpg" alt="Spannungsfelder II – Foto 1"></a>
+            <a href="images/Spannungsfelder%20II/BSOF_Spannungsfelder%20II%208%20Website.jpg" class="glightbox" data-gallery="sf2"><img src="images/Spannungsfelder%20II/BSOF_Spannungsfelder%20II%208%20Website.jpg" alt="Spannungsfelder II – Foto 2"></a>
+            <a href="images/Spannungsfelder%20II/Spannungsfelder%20II%2019%20Website.jpg" class="glightbox" data-gallery="sf2"><img src="images/Spannungsfelder%20II/Spannungsfelder%20II%2019%20Website.jpg" alt="Spannungsfelder II – Foto 3"></a>
           </div>
         </div>
         <div class="sf-slide-header">
@@ -425,9 +430,9 @@
           <img src="images/Logos%20f%C3%BCr%20SFP/spannungsfelder_iii_b500-e1742315674505.webp" alt="Spannungsfelder III – Recht und Gerechtigkeit" class="sf-cover"
                onerror="this.src='images/Spannungsfelder%20III/EP_048.jpg'">
           <div class="sf-gallery">
-            <img src="images/Spannungsfelder%20III/Spannungsfelder%20III_EP_048%20Website.jpg" alt="Spannungsfelder III – Foto 1">
-            <img src="images/Spannungsfelder%20III/Spannungsfelder%20III_EP_081%20Website.jpg" alt="Spannungsfelder III – Foto 2">
-            <img src="images/Spannungsfelder%20III/Spannungsfelder%20%20III_EP_070%20Website.jpg" alt="Spannungsfelder III – Foto 3">
+            <a href="images/Spannungsfelder%20III/Spannungsfelder%20III_EP_048%20Website.jpg" class="glightbox" data-gallery="sf3"><img src="images/Spannungsfelder%20III/Spannungsfelder%20III_EP_048%20Website.jpg" alt="Spannungsfelder III – Foto 1"></a>
+            <a href="images/Spannungsfelder%20III/Spannungsfelder%20III_EP_081%20Website.jpg" class="glightbox" data-gallery="sf3"><img src="images/Spannungsfelder%20III/Spannungsfelder%20III_EP_081%20Website.jpg" alt="Spannungsfelder III – Foto 2"></a>
+            <a href="images/Spannungsfelder%20III/Spannungsfelder%20%20III_EP_070%20Website.jpg" class="glightbox" data-gallery="sf3"><img src="images/Spannungsfelder%20III/Spannungsfelder%20%20III_EP_070%20Website.jpg" alt="Spannungsfelder III – Foto 3"></a>
           </div>
         </div>
         <div class="sf-slide-header">
@@ -473,9 +478,9 @@
           <img src="images/Logos%20f%C3%BCr%20SFP/bsof_education_project_iv_03_page-0001_b500.webp" alt="Spannungsfelder IV – Lüge und Wahrheit" class="sf-cover"
                onerror="this.src='images/Spannungsfelder%20IV/Premiere.jpg'">
           <div class="sf-gallery">
-            <img src="images/Spannungsfelder%20IV/Premiere%20Website.jpg" alt="Spannungsfelder IV – Foto 1">
-            <img src="images/Spannungsfelder%20IV/3.%20Auf%C3%BChrung%20Collegium%20Polonicum%20Website.jpg" alt="Spannungsfelder IV – Foto 2">
-            <img src="images/Spannungsfelder%20IV/Spannungsfelder_IV%20Website.jpg" alt="Spannungsfelder IV – Foto 3">
+            <a href="images/Spannungsfelder%20IV/Premiere%20Website.jpg" class="glightbox" data-gallery="sf4"><img src="images/Spannungsfelder%20IV/Premiere%20Website.jpg" alt="Spannungsfelder IV – Foto 1"></a>
+            <a href="images/Spannungsfelder%20IV/3.%20Auf%C3%BChrung%20Collegium%20Polonicum%20Website.jpg" class="glightbox" data-gallery="sf4"><img src="images/Spannungsfelder%20IV/3.%20Auf%C3%BChrung%20Collegium%20Polonicum%20Website.jpg" alt="Spannungsfelder IV – Foto 2"></a>
+            <a href="images/Spannungsfelder%20IV/Spannungsfelder_IV%20Website.jpg" class="glightbox" data-gallery="sf4"><img src="images/Spannungsfelder%20IV/Spannungsfelder_IV%20Website.jpg" alt="Spannungsfelder IV – Foto 3"></a>
           </div>
         </div>
         <div class="sf-slide-header">
@@ -523,9 +528,9 @@
           <img src="images/Logos%20f%C3%BCr%20SFP/BSOF_Spielzeit_25_26_Education_Projekt-1024x1024.webp" alt="Spannungsfelder V – Angst und Mut" class="sf-cover"
                onerror="this.src='images/Spannungsfelder%20V/klein_EPSa._3367.jpg'">
           <div class="sf-gallery">
-            <img src="images/Spannungsfelder%20V/Spannungsfelder%20-v%20Website.jpg" alt="Spannungsfelder V – Foto 1">
-            <img src="images/Spannungsfelder%20V/Spannungsfelder_V%20Website%20%282%29.jpg" alt="Spannungsfelder V – Foto 2">
-            <img src="images/Spannungsfelder%20V/Spannungsfelder_V%20Website%20%283%29.jpg" alt="Spannungsfelder V – Foto 3">
+            <a href="images/Spannungsfelder%20V/Spannungsfelder%20-v%20Website.jpg" class="glightbox" data-gallery="sf5"><img src="images/Spannungsfelder%20V/Spannungsfelder%20-v%20Website.jpg" alt="Spannungsfelder V – Foto 1"></a>
+            <a href="images/Spannungsfelder%20V/Spannungsfelder_V%20Website%20%282%29.jpg" class="glightbox" data-gallery="sf5"><img src="images/Spannungsfelder%20V/Spannungsfelder_V%20Website%20%282%29.jpg" alt="Spannungsfelder V – Foto 2"></a>
+            <a href="images/Spannungsfelder%20V/Spannungsfelder_V%20Website%20%283%29.jpg" class="glightbox" data-gallery="sf5"><img src="images/Spannungsfelder%20V/Spannungsfelder_V%20Website%20%283%29.jpg" alt="Spannungsfelder V – Foto 3"></a>
           </div>
         </div>
         <div class="sf-slide-header">
@@ -642,5 +647,7 @@
   })();
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>GLightbox({ selector: '.glightbox' });</script>
 </body>
 </html>
