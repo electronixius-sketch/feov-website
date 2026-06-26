@@ -56,14 +56,17 @@
       align-items: start;
     }
 
-    .sf-cover {
+    .sf-left-col {
       grid-column: 1;
       grid-row: 1 / 100;
+      align-self: start;
+    }
+    .sf-cover {
       width: 100%;
       height: auto;
       display: block;
       border-radius: 3px;
-      align-self: start;
+      margin-bottom: 0.6rem;
     }
 
     .sf-slide-header {
@@ -270,11 +273,13 @@
         grid-template-columns: 1fr;
         grid-template-rows: auto;
       }
-      .sf-cover {
+      .sf-left-col {
         grid-column: 1;
         grid-row: auto;
+      }
+      .sf-cover {
         max-width: 260px;
-        margin: 0 auto 1.5rem;
+        margin: 0 auto 0.6rem;
       }
       .sf-slide-header,
       .sf-slide .divider,
@@ -324,8 +329,15 @@
 
       <!-- Slide 1 -->
       <div class="sf-slide active" data-index="0">
-        <img src="images/Logos%20f%C3%BCr%20SFP/spannungsfelder_i_b500.webp" alt="Spannungsfelder I – Musik und Technik" class="sf-cover"
-             onerror="this.src='images/Spannungsfelder%20I/1_Spannungsfelder.jpg'">
+        <div class="sf-left-col">
+          <img src="images/Logos%20f%C3%BCr%20SFP/spannungsfelder_i_b500.webp" alt="Spannungsfelder I – Musik und Technik" class="sf-cover"
+               onerror="this.src='images/Spannungsfelder%20I/1_Spannungsfelder.jpg'">
+          <div class="sf-gallery">
+            <img src="images/Spannungsfelder%20I/1_Spannungsfelder%202021%20Website.jpg" alt="Spannungsfelder I – Foto 1">
+            <img src="images/Spannungsfelder%20I/1_Spannungsfelder_EP21_061111-58%20AM%20-%20Website.jpg" alt="Spannungsfelder I – Foto 2">
+            <img src="images/Spannungsfelder%20I/Spannungsfelder%201__EP21_016710-20%20AM%20Website.jpg" alt="Spannungsfelder I – Foto 3">
+          </div>
+        </div>
         <div class="sf-slide-header">
           <h2>Spannungsfelder I</h2>
           <div class="sf-theme">»Musik und Technik«</div>
@@ -358,19 +370,20 @@
             <img src="images/Spannungsfelder%20I/Logos/land-brandenburg-logo-png_seeklogo-496524.png" alt="Land Brandenburg" onerror="this.style.display='none'">
             <img src="images/Spannungsfelder%20I/Logos/Stadt%20Frankfurt%20(Oder)-Slubice_4c.jpg" alt="Stadt Frankfurt (Oder) / Słubice" onerror="this.style.display='none'">
           </div>
-
-          <div class="sf-gallery">
-            <img src="images/Spannungsfelder%20I/1_Spannungsfelder%202021%20Website.jpg" alt="Spannungsfelder I – Foto 1">
-            <img src="images/Spannungsfelder%20I/1_Spannungsfelder_EP21_061111-58%20AM%20-%20Website.jpg" alt="Spannungsfelder I – Foto 2">
-            <img src="images/Spannungsfelder%20I/Spannungsfelder%201__EP21_016710-20%20AM%20Website.jpg" alt="Spannungsfelder I – Foto 3">
-          </div>
         </div>
       </div>
 
       <!-- Slide 2 -->
       <div class="sf-slide" data-index="1">
-        <img src="images/Logos%20f%C3%BCr%20SFP/spannungsfelder_ii_b500.webp" alt="Spannungsfelder II – Orient meets Occident" class="sf-cover"
-             onerror="this.src='images/Spannungsfelder%20II/Spannungsfelder%20II.jpg'">
+        <div class="sf-left-col">
+          <img src="images/Logos%20f%C3%BCr%20SFP/spannungsfelder_ii_b500.webp" alt="Spannungsfelder II – Orient meets Occident" class="sf-cover"
+               onerror="this.src='images/Spannungsfelder%20II/Spannungsfelder%20II.jpg'">
+          <div class="sf-gallery">
+            <img src="images/Spannungsfelder%20II/BSOF_Spannungsfelder%20II%206%20Website.jpg" alt="Spannungsfelder II – Foto 1">
+            <img src="images/Spannungsfelder%20II/BSOF_Spannungsfelder%20II%208%20Website.jpg" alt="Spannungsfelder II – Foto 2">
+            <img src="images/Spannungsfelder%20II/Spannungsfelder%20II%2019%20Website.jpg" alt="Spannungsfelder II – Foto 3">
+          </div>
+        </div>
         <div class="sf-slide-header">
           <h2>Spannungsfelder II</h2>
           <div class="sf-theme">»Orient meets Occident«</div>
@@ -407,19 +420,20 @@
             <img src="images/Spannungsfelder%20I/Logos/land-brandenburg-logo-png_seeklogo-496524.png" alt="Land Brandenburg" onerror="this.style.display='none'">
             <img src="images/Spannungsfelder%20I/Logos/Stadt%20Frankfurt%20(Oder)-Slubice_4c.jpg" alt="Stadt Frankfurt (Oder) / Słubice" onerror="this.style.display='none'">
           </div>
-
-          <div class="sf-gallery">
-            <img src="images/Spannungsfelder%20II/BSOF_Spannungsfelder%20II%206%20Website.jpg" alt="Spannungsfelder II – Foto 1">
-            <img src="images/Spannungsfelder%20II/BSOF_Spannungsfelder%20II%208%20Website.jpg" alt="Spannungsfelder II – Foto 2">
-            <img src="images/Spannungsfelder%20II/Spannungsfelder%20II%2019%20Website.jpg" alt="Spannungsfelder II – Foto 3">
-          </div>
         </div>
       </div>
 
       <!-- Slide 3 -->
       <div class="sf-slide" data-index="2">
-        <img src="images/Logos%20f%C3%BCr%20SFP/spannungsfelder_iii_b500-e1742315674505.webp" alt="Spannungsfelder III – Recht und Gerechtigkeit" class="sf-cover"
-             onerror="this.src='images/Spannungsfelder%20III/EP_048.jpg'">
+        <div class="sf-left-col">
+          <img src="images/Logos%20f%C3%BCr%20SFP/spannungsfelder_iii_b500-e1742315674505.webp" alt="Spannungsfelder III – Recht und Gerechtigkeit" class="sf-cover"
+               onerror="this.src='images/Spannungsfelder%20III/EP_048.jpg'">
+          <div class="sf-gallery">
+            <img src="images/Spannungsfelder%20III/Spannungsfelder%20III_EP_048%20Website.jpg" alt="Spannungsfelder III – Foto 1">
+            <img src="images/Spannungsfelder%20III/Spannungsfelder%20III_EP_081%20Website.jpg" alt="Spannungsfelder III – Foto 2">
+            <img src="images/Spannungsfelder%20III/Spannungsfelder%20%20III_EP_070%20Website.jpg" alt="Spannungsfelder III – Foto 3">
+          </div>
+        </div>
         <div class="sf-slide-header">
           <h2>Spannungsfelder III</h2>
           <div class="sf-theme">»Recht und Gerechtigkeit«</div>
@@ -454,19 +468,20 @@
             <img src="images/Spannungsfelder%20I/Logos/land-brandenburg-logo-png_seeklogo-496524.png" alt="Land Brandenburg" onerror="this.style.display='none'">
             <img src="images/Spannungsfelder%20I/Logos/Stadt%20Frankfurt%20(Oder)-Slubice_4c.jpg" alt="Stadt Frankfurt (Oder) / Słubice" onerror="this.style.display='none'">
           </div>
-
-          <div class="sf-gallery">
-            <img src="images/Spannungsfelder%20III/Spannungsfelder%20III_EP_048%20Website.jpg" alt="Spannungsfelder III – Foto 1">
-            <img src="images/Spannungsfelder%20III/Spannungsfelder%20III_EP_081%20Website.jpg" alt="Spannungsfelder III – Foto 2">
-            <img src="images/Spannungsfelder%20III/Spannungsfelder%20%20III_EP_070%20Website.jpg" alt="Spannungsfelder III – Foto 3">
-          </div>
         </div>
       </div>
 
       <!-- Slide 4 -->
       <div class="sf-slide" data-index="3">
-        <img src="images/Logos%20f%C3%BCr%20SFP/bsof_education_project_iv_03_page-0001_b500.webp" alt="Spannungsfelder IV – Lüge und Wahrheit" class="sf-cover"
-             onerror="this.src='images/Spannungsfelder%20IV/Premiere.jpg'">
+        <div class="sf-left-col">
+          <img src="images/Logos%20f%C3%BCr%20SFP/bsof_education_project_iv_03_page-0001_b500.webp" alt="Spannungsfelder IV – Lüge und Wahrheit" class="sf-cover"
+               onerror="this.src='images/Spannungsfelder%20IV/Premiere.jpg'">
+          <div class="sf-gallery">
+            <img src="images/Spannungsfelder%20IV/Premiere%20Website.jpg" alt="Spannungsfelder IV – Foto 1">
+            <img src="images/Spannungsfelder%20IV/3.%20Auf%C3%BChrung%20Collegium%20Polonicum%20Website.jpg" alt="Spannungsfelder IV – Foto 2">
+            <img src="images/Spannungsfelder%20IV/Spannungsfelder_IV%20Website.jpg" alt="Spannungsfelder IV – Foto 3">
+          </div>
+        </div>
         <div class="sf-slide-header">
           <h2>Spannungsfelder IV</h2>
           <div class="sf-theme">»Lüge und Wahrheit«</div>
@@ -503,19 +518,20 @@
             <img src="images/Spannungsfelder%20I/Logos/land-brandenburg-logo-png_seeklogo-496524.png" alt="Land Brandenburg" onerror="this.style.display='none'">
             <img src="images/Spannungsfelder%20I/Logos/Stadt%20Frankfurt%20(Oder)-Slubice_4c.jpg" alt="Stadt Frankfurt (Oder) / Słubice" onerror="this.style.display='none'">
           </div>
-
-          <div class="sf-gallery">
-            <img src="images/Spannungsfelder%20IV/Premiere%20Website.jpg" alt="Spannungsfelder IV – Foto 1">
-            <img src="images/Spannungsfelder%20IV/3.%20Auf%C3%BChrung%20Collegium%20Polonicum%20Website.jpg" alt="Spannungsfelder IV – Foto 2">
-            <img src="images/Spannungsfelder%20IV/Spannungsfelder_IV%20Website.jpg" alt="Spannungsfelder IV – Foto 3">
-          </div>
         </div>
       </div>
 
       <!-- Slide 5 -->
       <div class="sf-slide" data-index="4">
-        <img src="images/Logos%20f%C3%BCr%20SFP/BSOF_Spielzeit_25_26_Education_Projekt-1024x1024.webp" alt="Spannungsfelder V – Angst und Mut" class="sf-cover"
-             onerror="this.src='images/Spannungsfelder%20V/klein_EPSa._3367.jpg'">
+        <div class="sf-left-col">
+          <img src="images/Logos%20f%C3%BCr%20SFP/BSOF_Spielzeit_25_26_Education_Projekt-1024x1024.webp" alt="Spannungsfelder V – Angst und Mut" class="sf-cover"
+               onerror="this.src='images/Spannungsfelder%20V/klein_EPSa._3367.jpg'">
+          <div class="sf-gallery">
+            <img src="images/Spannungsfelder%20V/Spannungsfelder%20-v%20Website.jpg" alt="Spannungsfelder V – Foto 1">
+            <img src="images/Spannungsfelder%20V/Spannungsfelder_V%20Website%20%282%29.jpg" alt="Spannungsfelder V – Foto 2">
+            <img src="images/Spannungsfelder%20V/Spannungsfelder_V%20Website%20%283%29.jpg" alt="Spannungsfelder V – Foto 3">
+          </div>
+        </div>
         <div class="sf-slide-header">
           <h2>Spannungsfelder V</h2>
           <div class="sf-theme">»Angst und Mut«</div>
@@ -546,12 +562,6 @@
             <img src="images/Spannungsfelder%20I/Logos/ilb-logo.png" alt="ILB – Investitionsbank des Landes Brandenburg" onerror="this.style.display='none'">
             <img src="images/Spannungsfelder%20I/Logos/land-brandenburg-logo-png_seeklogo-496524.png" alt="Land Brandenburg" onerror="this.style.display='none'">
             <img src="images/Spannungsfelder%20I/Logos/Stadt%20Frankfurt%20(Oder)-Slubice_4c.jpg" alt="Stadt Frankfurt (Oder) / Słubice" onerror="this.style.display='none'">
-          </div>
-
-          <div class="sf-gallery">
-            <img src="images/Spannungsfelder%20V/Spannungsfelder%20-v%20Website.jpg" alt="Spannungsfelder V – Foto 1">
-            <img src="images/Spannungsfelder%20V/Spannungsfelder_V%20Website%20%282%29.jpg" alt="Spannungsfelder V – Foto 2">
-            <img src="images/Spannungsfelder%20V/Spannungsfelder_V%20Website%20%283%29.jpg" alt="Spannungsfelder V – Foto 3">
           </div>
         </div>
       </div>
