@@ -147,10 +147,9 @@
     }
 
     .sf-gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex;
+      flex-direction: column;
       gap: 0.6rem;
-      margin-top: 2rem;
     }
     .sf-gallery img {
       width: 100%;
@@ -158,9 +157,6 @@
       object-fit: cover;
       border-radius: 3px;
       display: block;
-    }
-    @media (max-width: 500px) {
-      .sf-gallery { grid-template-columns: repeat(3, 1fr); gap: 0.35rem; }
     }
 
     .sf-yt-link {
