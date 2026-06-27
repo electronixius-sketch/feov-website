@@ -788,6 +788,9 @@ section { padding: var(--section-pad) 0; }
   filter: brightness(0.82);
 }
 
+/* Projekt-Tag */
+[data-theme="dark"] .projekt-tag { background: #383838; }
+
 /* Projekt-Karten */
 [data-theme="dark"] .projekt-card {
   background: #2a2a2a;
