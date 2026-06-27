@@ -41,31 +41,44 @@ function restore(text, used) {
   return out;
 }
 
-async function translateText(text) {
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+async function translateText(text, retries = 3) {
   if (!text || typeof text !== 'string' || text.trim() === '') return text;
 
   const { text: protected_, used } = protect(text);
 
-  const res = await fetch('https://api-free.deepl.com/v2/translate', {
-    method: 'POST',
-    headers: {
-      'Authorization': `DeepL-Auth-Key ${DEEPL_KEY}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      text: [protected_],
-      source_lang: 'DE',
-      target_lang: 'EN-GB',
-    }),
-  });
+  for (let attempt = 0; attempt < retries; attempt++) {
+    if (attempt > 0) await sleep(2000 * attempt);
 
-  if (!res.ok) {
-    const err = await res.text();
-    throw new Error(`DeepL error ${res.status}: ${err}`);
+    const res = await fetch('https://api-free.deepl.com/v2/translate', {
+      method: 'POST',
+      headers: {
+        'Authorization': `DeepL-Auth-Key ${DEEPL_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        text: [protected_],
+        source_lang: 'DE',
+        target_lang: 'EN-GB',
+      }),
+    });
+
+    if (res.status === 429) {
+      process.stdout.write(` [rate limit, waiting ${3 * (attempt+1)}s]\n`);
+      await sleep(3000 * (attempt + 1));
+      continue;
+    }
+
+    if (!res.ok) {
+      const err = await res.text();
+      throw new Error(`DeepL error ${res.status}: ${err}`);
+    }
+
+    const data = await res.json();
+    return restore(data.translations[0].text, used);
   }
-
-  const data = await res.json();
-  return restore(data.translations[0].text, used);
+  throw new Error('Max retries exceeded');
 }
 
 async function translateFile(filename) {
