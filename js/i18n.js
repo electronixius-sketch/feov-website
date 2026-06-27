@@ -47,6 +47,25 @@
       'card.lesekonzerte.text':  'Literatur trifft Musik in der Buchhandlung „Ulrich von Hutten" – ein Geheim-Tipp seit 2024, bei einem Glas Wein und ohne Eintritt.',
       'card.minikonzerte.title': 'Mini-Konzerte',
       'card.minikonzerte.text':  'Kleine Konzerte an verschiedenen Orten in der Innenstadt zeigen Präsenz des BSOF in der Stadt – neben den großen Konzerten im Kleist Forum.',
+      'mitglied.intro':    'As a member of the Friends and Supporters of BSOF, you support not only the orchestra – you become part of a community that loves music and actively shapes culture in Frankfurt (Oder).',
+      'mitglied.benefit1': 'Invitations to member events & rehearsal visits',
+      'mitglied.benefit2': 'Exclusive chamber concerts with BSOF musicians',
+      'mitglied.benefit3': 'Members newsletter with behind-the-scenes insights',
+      'mitglied.benefit4': 'Donations are tax-deductible – tax receipt on request',
+      'mitglied.fee.period':    'per year · due in January',
+      'mitglied.fee.note':      'Cancellation: 3 months before end of financial year',
+      'mitglied.download.text': 'Download the membership form, fill it in and send it to us signed by post or scanned by e-mail.',
+      'mitglied.download.btn':  'Download membership form',
+      'mitglied.firma':         'You are also welcome to become a member with your company or institution – <a href="#kontakt" style="color:rgba(255,255,255,0.5); text-decoration:underline;">contact us!</a>',
+      'spenden.label': 'Support us',
+      'spenden.h2':    'Donate – directly & effectively',
+      'spenden.p1':    'We welcome your donation, large or small. Every contribution goes entirely into the association\'s projects and benefits the Brandenburg State Orchestra Frankfurt directly.',
+      'spenden.p2':    'If you need a tax receipt, please contact us at <a href="mailto:foerderverein@bsof.de" style="color:var(--red);">foerderverein@bsof.de</a>.',
+      'spenden.konto.title':   'Our bank details',
+      'spenden.konto.h4':      'Bank details',
+      'spenden.konto.inhaber': 'Account holder',
+      'spenden.konto.bank':    'Bank',
+      'spenden.konto.note':    'As a non-profit association, we can provide a tax receipt on request.',
       'back.projekte':  '← Alle Projekte',
       'back.home':      '← Zurück',
     },
@@ -95,6 +114,25 @@
       'card.lesekonzerte.text':  'Literature meets music at the "Ulrich von Hutten" bookshop – a well-kept secret since 2024, with a glass of wine and free admission.',
       'card.minikonzerte.title': 'Mini concerts',
       'card.minikonzerte.text':  'Small concerts at various locations in the city centre show BSOF\'s presence in the city – alongside the major concerts at the Kleist Forum.',
+      'mitglied.intro':    'As a member of the Friends and Supporters of BSOF, you support not only the orchestra – you become part of a community that loves music and actively shapes culture in Frankfurt (Oder).',
+      'mitglied.benefit1': 'Invitations to member events & rehearsal visits',
+      'mitglied.benefit2': 'Exclusive chamber concerts with BSOF musicians',
+      'mitglied.benefit3': 'Members newsletter with behind-the-scenes insights',
+      'mitglied.benefit4': 'Donations are tax-deductible – tax receipt on request',
+      'mitglied.fee.period':    'per year · due in January',
+      'mitglied.fee.note':      'Cancellation: 3 months before end of financial year',
+      'mitglied.download.text': 'Download the membership form, fill it in and send it to us signed by post or scanned by e-mail.',
+      'mitglied.download.btn':  'Download membership form',
+      'mitglied.firma':         'You are also welcome to become a member with your company or institution – <a href="#kontakt" style="color:rgba(255,255,255,0.5); text-decoration:underline;">contact us!</a>',
+      'spenden.label': 'Support us',
+      'spenden.h2':    'Donate – directly & effectively',
+      'spenden.p1':    'We welcome your donation, large or small. Every contribution goes entirely into the association\'s projects and benefits the Brandenburg State Orchestra Frankfurt directly.',
+      'spenden.p2':    'If you need a tax receipt, please contact us at <a href="mailto:foerderverein@bsof.de" style="color:var(--red);">foerderverein@bsof.de</a>.',
+      'spenden.konto.title':   'Our bank details',
+      'spenden.konto.h4':      'Bank details',
+      'spenden.konto.inhaber': 'Account holder',
+      'spenden.konto.bank':    'Bank',
+      'spenden.konto.note':    'As a non-profit association, we can provide a tax receipt on request.',
       'back.projekte':  '← All projects',
       'back.home':      '← Back',
     }
@@ -112,7 +150,7 @@
     var t = STATIC[lang] || STATIC.de;
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var k = el.getAttribute('data-i18n');
-      if (t[k] !== undefined) el.textContent = t[k];
+      if (t[k] !== undefined) el.innerHTML = t[k];
     });
 
     // Toggle-Darstellung
