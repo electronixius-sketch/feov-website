@@ -716,13 +716,13 @@ section { padding: var(--section-pad) 0; }
 ══════════════════════════════════════════ */
 
 [data-theme="dark"] {
-  --cream:      #252018;
-  --cream-dark: #1e1a12;
-  --dark:       #e8e3db;
-  --mid:        #a8a098;
-  --light:      #605850;
-  --white:      #181410;
-  --border:     #3a3228;
+  --cream:      #1c1c1c;
+  --cream-dark: #161616;
+  --dark:       #eeebe6;
+  --mid:        #aaaaaa;
+  --light:      #666666;
+  --white:      #111111;
+  --border:     #2e2e2e;
 }
 
 /* Toggle-Button */
@@ -735,7 +735,7 @@ section { padding: var(--section-pad) 0; }
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  color: var(--white);
+  color: #ffffff;
   transition: background 0.2s;
   flex-shrink: 0;
 }
@@ -745,34 +745,58 @@ section { padding: var(--section-pad) 0; }
 [data-theme="dark"] .theme-toggle .icon-sun  { display: block; }
 [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 
-/* Bilder im Darkmode etwas abdunkeln */
+/* Hero bleibt immer weiß (Foto-Hintergrund) */
+[data-theme="dark"] .hero-content { color: #ffffff; }
+[data-theme="dark"] .hero-content h1 { color: #ffffff; }
+[data-theme="dark"] .hero-content p  { color: rgba(255,255,255,0.8); }
+[data-theme="dark"] .hero-actions .btn-outline {
+  color: #ffffff; border-color: #ffffff;
+}
+[data-theme="dark"] .hero-actions .btn-outline:hover {
+  background: rgba(255,255,255,0.15); color: #ffffff;
+}
+
+/* Buttons */
+[data-theme="dark"] .btn-outline-dark {
+  color: #eeebe6; border-color: #eeebe6;
+}
+[data-theme="dark"] .btn-outline-dark:hover {
+  background: #eeebe6; color: #111111;
+}
+[data-theme="dark"] .nav-cta-spenden {
+  color: #ffffff; border-color: rgba(255,255,255,0.7);
+}
+
+/* Bilder leicht abdunkeln */
 [data-theme="dark"] img:not(.nav-logo img):not(.hero-logo) {
-  filter: brightness(0.88) contrast(1.02);
+  filter: brightness(0.85);
 }
 
 /* Projekt-Karten */
 [data-theme="dark"] .projekt-card {
-  background: #222018;
-  border-color: #3a3228;
+  background: #1c1c1c;
+  border-color: #2e2e2e;
 }
 
 /* Ziel-Karten */
-[data-theme="dark"] .ziel-card { background: var(--cream); }
+[data-theme="dark"] .ziel-card { background: #1c1c1c; }
 
 /* Grußwort */
-[data-theme="dark"] .grusswort { background: var(--cream); }
+[data-theme="dark"] .grusswort { background: #1c1c1c; }
 
-/* Ueber-Badge */
-[data-theme="dark"] .ueber-image-badge { background: var(--dark); color: var(--white); }
-
-/* Intro-Strip bleibt rot */
-[data-theme="dark"] .intro-strip { background: var(--red); }
+/* Über-Badge */
+[data-theme="dark"] .ueber-image-badge {
+  background: #eeebe6; color: #111111;
+}
 
 /* Divider */
-[data-theme="dark"] .divider { background: var(--border); }
+[data-theme="dark"] .divider { background: #2e2e2e; }
 
-/* Info-Box auf Detailseiten */
-[data-theme="dark"] .info-box { background: var(--cream); border-color: var(--red); }
+/* Info-Box */
+[data-theme="dark"] .info-box { background: #1c1c1c; border-color: var(--red); }
+
+/* Footer etwas dunkler */
+[data-theme="dark"] .site-footer { background: #0a0a0a; }
 
 @media (max-width: 768px) {
   :root { --nav-h: 64px; }
