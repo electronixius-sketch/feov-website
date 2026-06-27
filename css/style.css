@@ -796,6 +796,7 @@ section { padding: var(--section-pad) 0; }
 [data-theme="dark"] .info-box { background: #1c1c1c; border-color: var(--red); }
 
 /* Mitglied werden — nutzt --dark als Hintergrund, muss explizit überschrieben werden */
+[data-theme="dark"] .beitritt-fee .fee-amount { color: #ffffff; }
 [data-theme="dark"] .mitglied { background: #0d0d0d; color: #eeebe6; }
 [data-theme="dark"] .mitglied .section-header h2 { color: #eeebe6; }
 [data-theme="dark"] .mitglied .section-label { color: rgba(255,255,255,0.45); }
