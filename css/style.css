@@ -763,6 +763,14 @@ section { padding: var(--section-pad) 0; }
 [data-theme="dark"] .btn-outline-dark:hover {
   background: #eeebe6; color: #111111;
 }
+
+/* Nav-Buttons: immer wie im Lightmode (Nav ist immer rot) */
+[data-theme="dark"] .nav-cta.btn-primary {
+  background: #ffffff; color: var(--red); border-color: #ffffff;
+}
+[data-theme="dark"] .nav-cta.btn-primary:hover {
+  background: rgba(255,255,255,0.9); border-color: rgba(255,255,255,0.9);
+}
 [data-theme="dark"] .nav-cta-spenden {
   color: #ffffff; border-color: rgba(255,255,255,0.7);
 }
