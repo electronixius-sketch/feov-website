@@ -64,7 +64,7 @@
     <a href="index.html" class="nav-logo">
       <img src="images/Logo%20ohne%20Hintergrund.svg" alt="Förderverein BSOF Logo" style="height:64px;width:auto;">
     </a>
-    <a href="index.html#projekte" class="btn btn-outline-dark" style="font-size:0.85rem;padding:0.6rem 1.25rem;">← Alle Projekte</a>
+    <a href="index.html#projekte" class="btn btn-outline-dark" style="font-size:0.85rem;padding:0.6rem 1.25rem;" data-i18n="back.projekte">← Alle Projekte</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="Darkmode umschalten">
       <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
@@ -79,12 +79,12 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
         <polyline points="19 12 5 12"/><polyline points="12 5 5 12 12 19"/>
       </svg>
-      Zurück zu allen Projekten
+      <span data-i18n="back.link">Zurück zu allen Projekten</span>
     </a>
 
     <div class="projekt-meta">
-      <span class="projekt-tag">Förderung</span>
-      <span class="section-label" style="margin:0;">Kulturelle Bildung</span>
+      <span class="projekt-tag" data-i18n="tag.foerderung">Förderung</span>
+      <span class="section-label" style="margin:0;" data-i18n="edu.label">Kulturelle Bildung</span>
     </div>
 
     <h1>Education-Projekte</h1>
@@ -96,7 +96,7 @@
     <p data-cms-key="intro1">Seit 2008 unterstützt der Förderverein des Brandenburgischen Staatsorchesters Frankfurt (Oder) großangelegte Education-Projekte, die Kindern und Jugendlichen den Weg zur Musik öffnen – und sie dabei selbst zu Gestalterinnen und Gestaltern machen.</p>
     <p data-cms-key="intro2">Diese Großprojekte haben kaum Eigenmittel. Ohne externe Fördergelder und großzügige Sponsoren, aber auch ohne die Unterstützung des Fördervereins wären diese wichtigen Projekte nicht möglich. Unser Ziel ist es, <strong>Brücken zur Kultur zu bauen</strong> – für alle Kinder, unabhängig von Herkunft oder Vorkenntnissen.</p>
 
-    <h2>Was die Kinder erleben</h2>
+    <h2 data-i18n="edu.was.h2">Was die Kinder erleben</h2>
     <p data-cms-key="was_intro">In den Education-Projekten gestalten Kinder und Jugendliche aktiv mit. Sie bringen sich in vielfältigen künstlerischen Disziplinen ein:</p>
     <ul class="activity-list">
       <li>Musik</li>
@@ -124,15 +124,15 @@
       </p>
     </div>
 
-    <h2>Mitmachen &amp; Unterstützen</h2>
+    <h2 data-i18n="section.mitmachen">Mitmachen &amp; Unterstützen</h2>
     <p>
       Mit Ihrer Mitgliedschaft im Förderverein ermöglichen Sie, dass Education-Projekte
       wie diese auch in Zukunft stattfinden können – und dass Kinder in Frankfurt (Oder)
       und der Region erleben, was Musik mit Menschen macht.
     </p>
     <div style="display:flex; gap:1rem; flex-wrap:wrap;">
-      <a href="index.html#spenden" class="btn btn-primary">Jetzt spenden</a>
-      <a href="index.html#mitglied-werden" class="btn btn-outline-dark">Mitglied werden</a>
+      <a href="index.html#spenden" class="btn btn-primary" data-i18n="nav.cta.spenden">Jetzt spenden</a>
+      <a href="index.html#mitglied-werden" class="btn btn-outline-dark" data-i18n="nav.cta.mitglied">Mitglied werden</a>
     </div>
 
   </div>
@@ -141,5 +141,6 @@
 <script src="js/cms-loader.js"></script>
 <script>loadCMSContent('content/education.json');</script>
 <script src="js/theme.js"></script>
+<script src="js/i18n.js"></script>
 </body>
 </html>

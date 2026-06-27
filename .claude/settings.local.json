@@ -21,7 +21,8 @@
       "Bash(git config *)",
       "Bash(git push *)",
       "mcp__Claude_Preview__preview_start",
-      "Bash(cd \"/c/Users/Presse-FSJ/FÖV website/images\" && ls -lt --time-style='+%Y-%m-%d %H:%M' | head -40)"
+      "Bash(cd \"/c/Users/Presse-FSJ/FÖV website/images\" && ls -lt --time-style='+%Y-%m-%d %H:%M' | head -40)",
+      "Bash(git checkout *)"
     ]
   }
 }
