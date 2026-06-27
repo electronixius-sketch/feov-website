@@ -1,0 +1,36 @@
+name: Auto-translate content to English
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/*.json'
+  workflow_dispatch:
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Translate content files
+        env:
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+        run: node scripts/translate.js
+
+      - name: Commit English translations
+        run: |
+          git config user.name "Translation Bot"
+          git config user.email "bot@foerderverein-bsof.de"
+          git add content/en/
+          git diff --staged --quiet || git commit -m "Auto-translate: English content update"
+          git push

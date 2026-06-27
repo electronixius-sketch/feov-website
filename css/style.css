@@ -733,6 +733,26 @@ section { padding: var(--section-pad) 0; }
   --border:     #2e2e2e;
 }
 
+/* Sprach-Toggle */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  border-radius: 20px;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  gap: 2px;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+.lang-toggle:hover { background: rgba(255,255,255,0.28); }
+.lang-toggle [data-lang] { cursor: pointer; transition: opacity 0.15s, font-weight 0.15s; }
+
 /* Toggle-Button */
 .theme-toggle {
   display: flex;
