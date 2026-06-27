@@ -782,15 +782,19 @@ section { padding: var(--section-pad) 0; }
 
 /* Projekt-Karten */
 [data-theme="dark"] .projekt-card {
-  background: #1c1c1c;
-  border-color: #2e2e2e;
+  background: #2a2a2a;
+  border-color: #404040;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
 }
 
 /* Ziel-Karten */
-[data-theme="dark"] .ziel-card { background: #1c1c1c; }
+[data-theme="dark"] .ziel-card {
+  background: #2a2a2a;
+  border-color: #404040;
+}
 
 /* Grußwort */
-[data-theme="dark"] .grusswort { background: #1c1c1c; }
+[data-theme="dark"] .grusswort { background: #1e1e1e; }
 
 /* Über-Badge */
 [data-theme="dark"] .ueber-image-badge {
