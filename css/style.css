@@ -795,8 +795,19 @@ section { padding: var(--section-pad) 0; }
 /* Info-Box */
 [data-theme="dark"] .info-box { background: #1c1c1c; border-color: var(--red); }
 
-/* Footer etwas dunkler */
-[data-theme="dark"] .site-footer { background: #0a0a0a; }
+/* Mitglied werden — nutzt --dark als Hintergrund, muss explizit überschrieben werden */
+[data-theme="dark"] .mitglied { background: #0d0d0d; color: #eeebe6; }
+[data-theme="dark"] .mitglied .section-header h2 { color: #eeebe6; }
+[data-theme="dark"] .mitglied .section-label { color: rgba(255,255,255,0.45); }
+[data-theme="dark"] .mitglied p { color: #aaaaaa; }
+
+/* Footer — gleiche Situation */
+[data-theme="dark"] .site-footer { background: #0a0a0a; color: #cccccc; }
+[data-theme="dark"] .footer-col h5 { color: #eeebe6; }
+[data-theme="dark"] .footer-col a { color: #aaaaaa; }
+[data-theme="dark"] .footer-col a:hover { color: #eeebe6; }
+[data-theme="dark"] .footer-brand p { color: #aaaaaa; }
+[data-theme="dark"] .footer-bottom { color: #555555; border-color: #2e2e2e; }
 
 @media (max-width: 768px) {
   :root { --nav-h: 64px; }
