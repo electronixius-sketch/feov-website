@@ -33,4 +33,5 @@ jobs:
           git config user.email "bot@foerderverein-bsof.de"
           git add content/en/
           git diff --staged --quiet || git commit -m "Auto-translate: English content update"
+          git pull --rebase origin main
           git push
