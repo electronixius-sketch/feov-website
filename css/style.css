@@ -775,9 +775,9 @@ section { padding: var(--section-pad) 0; }
   color: #ffffff; border-color: rgba(255,255,255,0.7);
 }
 
-/* Bilder leicht abdunkeln */
-[data-theme="dark"] img:not(.nav-logo img):not(.hero-logo) {
-  filter: brightness(0.85);
+/* Kachelbilder leicht abdunkeln (nur Projekt-Cards) */
+[data-theme="dark"] .projekt-card-img img {
+  filter: brightness(0.82);
 }
 
 /* Projekt-Karten */
