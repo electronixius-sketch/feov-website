@@ -1,6 +1,4 @@
 // Auto-translation script: German content → English via DeepL
-// Runs via GitHub Action when content/*.json files change
-
 const fs   = require('fs');
 const path = require('path');
 
@@ -10,29 +8,35 @@ const EN_DIR      = path.join(CONTENT_DIR, 'en');
 
 // Terms that must NOT be translated
 const KEEP = [
-  'BSOF',
+  'Brandenburgisches Staatsorchester Frankfurt (Oder)',
+  'Brandenburgisches Staatsorchester',
   'Förderverein',
   'Spannungsfelder',
   'Frankfurt (Oder)',
-  'Brandenburgisches Staatsorchester',
   'Słubice',
   'Collegium Polonicum',
   'Kleist Forum',
   'Logenstraße',
+  'BSOF',
 ];
 
 function protect(text) {
   let out = text;
+  const used = [];
   KEEP.forEach((term, i) => {
-    out = out.split(term).join(`<x id="${i}"/>`);
+    if (out.includes(term)) {
+      const ph = `XKEEPX${i}X`;
+      out = out.split(term).join(ph);
+      used.push({ ph, term });
+    }
   });
-  return { text: out, map: KEEP };
+  return { text: out, used };
 }
 
-function restore(text, map) {
+function restore(text, used) {
   let out = text;
-  map.forEach((term, i) => {
-    out = out.split(`<x id="${i}"/>`).join(term);
+  used.forEach(({ ph, term }) => {
+    out = out.split(ph).join(term);
   });
   return out;
 }
@@ -40,7 +44,7 @@ function restore(text, map) {
 async function translateText(text) {
   if (!text || typeof text !== 'string' || text.trim() === '') return text;
 
-  const { text: protected_, map } = protect(text);
+  const { text: protected_, used } = protect(text);
 
   const res = await fetch('https://api-free.deepl.com/v2/translate', {
     method: 'POST',
@@ -52,8 +56,6 @@ async function translateText(text) {
       text: [protected_],
       source_lang: 'DE',
       target_lang: 'EN-GB',
-      tag_handling: 'xml',
-      ignore_tags: ['x'],
     }),
   });
 
@@ -63,7 +65,7 @@ async function translateText(text) {
   }
 
   const data = await res.json();
-  return restore(data.translations[0].text, map);
+  return restore(data.translations[0].text, used);
 }
 
 async function translateFile(filename) {
