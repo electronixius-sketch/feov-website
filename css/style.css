@@ -397,6 +397,8 @@ section { padding: var(--section-pad) 0; }
 .projekt-card {
   background: var(--white);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   transition: box-shadow 0.25s;
   position: relative;
 }
@@ -420,7 +422,13 @@ section { padding: var(--section-pad) 0; }
   background: var(--cream-dark);
 }
 .projekt-card-img-placeholder svg { width: 48px; height: 48px; color: var(--border); }
-.projekt-card-body { padding: 1.75rem; }
+.projekt-card-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.projekt-card-body p { flex: 1; }
 .projekt-tag {
   display: inline-block;
   background: var(--cream);
