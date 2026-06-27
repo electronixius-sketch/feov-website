@@ -23,12 +23,6 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Pull latest main
-        run: |
-          git config user.name "Translation Bot"
-          git config user.email "bot@foerderverein-bsof.de"
-          git pull origin main
-
       - name: Translate content files
         env:
           DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
@@ -36,6 +30,8 @@ jobs:
 
       - name: Commit and push English translations
         run: |
+          git config user.name "Translation Bot"
+          git config user.email "bot@foerderverein-bsof.de"
           git add content/en/
           git diff --staged --quiet || git commit -m "Auto-translate: English content update"
           git push origin HEAD:main
