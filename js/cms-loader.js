@@ -1,6 +1,10 @@
 // Lädt Inhalte aus einer JSON-Datei und setzt sie in Elemente mit data-cms-key
 // Unterstützt Mehrsprachigkeit: bei lang=en wird content/en/... geladen
+
+var _cmsRegistry = [];
+
 async function loadCMSContent(jsonPath) {
+  if (!_cmsRegistry.includes(jsonPath)) _cmsRegistry.push(jsonPath);
   try {
     var lang = localStorage.getItem('feov-lang') || 'de';
     var actualPath = jsonPath;
@@ -8,7 +12,6 @@ async function loadCMSContent(jsonPath) {
       actualPath = jsonPath.replace('content/', 'content/en/');
     }
     var res = await fetch(actualPath);
-    // Fallback auf Deutsch wenn englische Version noch nicht vorhanden
     if (!res.ok && lang === 'en') res = await fetch(jsonPath);
     if (!res.ok) return;
     var data = await res.json();
@@ -22,7 +25,9 @@ async function loadCMSContent(jsonPath) {
         el.innerHTML = html;
       }
     });
-  } catch (e) {
-    // Fehler still ignorieren – Seite zeigt Originalinhalt
-  }
+  } catch (e) {}
+}
+
+function reloadAllCMS() {
+  _cmsRegistry.forEach(function(p) { loadCMSContent(p); });
 }
