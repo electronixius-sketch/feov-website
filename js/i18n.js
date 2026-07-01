@@ -99,9 +99,10 @@
       'edu.act4': 'Schreiben',
       'edu.act5': 'Tanzen',
       'edu.act6': 'Filmen',
-      'sf.subtitle':  'Musik, Theater, Tanz und Diskussion – gemeinsam mit Schülerinnen und Schülern aus Frankfurt (Oder) und der Region.',
-      'sf.musik':     'Musik',
-      'sf.gefördert': 'Gefördert durch',
+      'sf.subtitle':    'Musik, Theater, Tanz und Diskussion – gemeinsam mit Schülerinnen und Schülern aus Frankfurt (Oder) und der Region.',
+      'sf.musik':       'Musik',
+      'sf.gefördert':   'Gefördert durch',
+      'sf.mitmachen.p': 'Als Mitglied des Fördervereins unterstützen Sie Projekte wie die Spannungsfelder-Reihe und ermöglichen, dass Kinder und Jugendliche in der Region weiterhin solche einzigartigen Begegnungen mit Musik und Kunst erleben können.',
     },
     en: {
       'nav.ueber':    'About us',
@@ -200,9 +201,10 @@
       'edu.act4': 'Writing',
       'edu.act5': 'Dancing',
       'edu.act6': 'Filming',
-      'sf.subtitle':  'Music, theatre, dance and discussion – together with pupils from Frankfurt (Oder) and the region.',
-      'sf.musik':     'Music',
-      'sf.gefördert': 'Funded by',
+      'sf.subtitle':    'Music, theatre, dance and discussion – together with pupils from Frankfurt (Oder) and the region.',
+      'sf.musik':       'Music',
+      'sf.gefördert':   'Funded by',
+      'sf.mitmachen.p': 'As a member of the Förderverein, you support projects like the Spannungsfelder series and enable children and young people in the region to continue experiencing such unique encounters with music and art.',
     }
   };
 
