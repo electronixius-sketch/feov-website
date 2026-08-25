@@ -39,24 +39,55 @@
     }
     .info-box p { margin: 0; font-size: 0.9rem; }
     .edu-teaser {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
       background: var(--cream);
+      border: 2px solid var(--red);
+      border-radius: 6px;
       padding: 1.5rem 1.75rem;
-      margin: 2rem 0;
-      border-radius: 4px;
+      margin: 2.5rem 0;
     }
-    .edu-teaser h2 { margin: 0 0 0.5rem; }
-    .edu-teaser p { margin-bottom: 1rem; }
-    .edu-teaser-link {
-      font-size: 0.85rem;
+    .edu-teaser-img {
+      width: 110px; height: 110px;
+      object-fit: cover;
+      border-radius: 4px;
+      flex-shrink: 0;
+      display: block;
+    }
+    .edu-teaser-body { flex: 1; min-width: 0; }
+    .edu-teaser-tag {
+      display: inline-block;
+      background: var(--red);
+      color: #fff;
+      font-size: 0.7rem;
       font-weight: 700;
-      color: var(--red);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.65rem;
+      border-radius: 3px;
+      margin-bottom: 0.6rem;
+    }
+    .edu-teaser h2 { margin: 0 0 0.5rem; font-size: 1.25rem; }
+    .edu-teaser p { margin-bottom: 1rem; font-size: 0.92rem; }
+    .edu-teaser-link {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      transition: gap 0.2s;
+      gap: 0.5rem;
+      background: var(--red);
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 0.6rem 1.1rem;
+      border-radius: 3px;
       text-decoration: none;
+      transition: opacity 0.2s;
     }
-    .edu-teaser-link:hover { gap: 0.7rem; }
+    .edu-teaser-link:hover { opacity: 0.85; }
+    @media (max-width: 560px) {
+      .edu-teaser { flex-direction: column; align-items: stretch; text-align: center; }
+      .edu-teaser-img { width: 100%; height: 160px; }
+    }
   </style>
 </head>
 <body>
@@ -99,9 +130,14 @@
     <p data-cms-key="intro2">Diese Großprojekte haben kaum Eigenmittel. Ohne externe Fördergelder und großzügige Sponsoren, aber auch ohne die Unterstützung des Fördervereins wären diese wichtigen Projekte nicht möglich. Unser Ziel ist es, <strong>Brücken zur Kultur zu bauen</strong> – für alle Kinder, unabhängig von Herkunft oder Vorkenntnissen.</p>
 
     <div class="edu-teaser">
-      <h2 data-i18n="edu.spannungsfelder.h2">Teilprojekt: Spannungsfelder</h2>
-      <p data-cms-key="sf_teaser">Ein festes Format innerhalb unserer Education-Arbeit ist die Reihe „Spannungsfelder" – Musik, Theater und Tanz zu gesellschaftlichen Themen, gemeinsam mit Schülerinnen und Schülern aus Frankfurt (Oder) und der Region.</p>
-      <a class="edu-teaser-link" href="projekt-spannungsfelder.html" data-i18n="edu.spannungsfelder.link">Mehr zu Spannungsfelder erfahren<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <img src="images/Spannungsfelder%20IV/Premiere%20Website.jpg" alt="Spannungsfelder" class="edu-teaser-img"
+           onerror="this.style.display='none'">
+      <div class="edu-teaser-body">
+        <span class="edu-teaser-tag" data-i18n="edu.spannungsfelder.tag">Teilprojekt</span>
+        <h2 data-i18n="edu.spannungsfelder.h2" style="margin-top:0;">Spannungsfelder</h2>
+        <p data-cms-key="sf_teaser">Ein festes Format innerhalb unserer Education-Arbeit ist die Reihe „Spannungsfelder" – Musik, Theater und Tanz zu gesellschaftlichen Themen, gemeinsam mit Schülerinnen und Schülern aus Frankfurt (Oder) und der Region.</p>
+        <a class="edu-teaser-link" href="projekt-spannungsfelder.html" data-i18n="edu.spannungsfelder.link">Mehr zu Spannungsfelder erfahren<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
     </div>
 
     <div class="info-box">
