@@ -46,7 +46,17 @@
     }
     .edu-teaser h2 { margin: 0 0 0.5rem; }
     .edu-teaser p { margin-bottom: 1rem; }
-    .edu-teaser .projekt-link { font-weight: 700; }
+    .edu-teaser-link {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--red);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: gap 0.2s;
+      text-decoration: none;
+    }
+    .edu-teaser-link:hover { gap: 0.7rem; }
   </style>
 </head>
 <body>
@@ -91,7 +101,7 @@
     <div class="edu-teaser">
       <h2 data-i18n="edu.spannungsfelder.h2">Teilprojekt: Spannungsfelder</h2>
       <p data-cms-key="sf_teaser">Ein festes Format innerhalb unserer Education-Arbeit ist die Reihe „Spannungsfelder" – Musik, Theater und Tanz zu gesellschaftlichen Themen, gemeinsam mit Schülerinnen und Schülern aus Frankfurt (Oder) und der Region.</p>
-      <a class="projekt-link" href="projekt-spannungsfelder.html" data-i18n="edu.spannungsfelder.link">Mehr zu Spannungsfelder erfahren<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a class="edu-teaser-link" href="projekt-spannungsfelder.html" data-i18n="edu.spannungsfelder.link">Mehr zu Spannungsfelder erfahren<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
 
     <div class="info-box">
