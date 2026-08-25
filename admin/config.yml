@@ -116,7 +116,25 @@ collections:
           - { label: Titel, name: title, widget: string }
           - { label: Einleitung (Absatz 1), name: intro1, widget: text }
           - { label: Einleitung (Absatz 2), name: intro2, widget: text }
-          - { label: Was die Kinder erleben – Einleitung, name: was_intro, widget: text }
-          - { label: Was die Kinder erleben – Abschluss, name: was_text, widget: text }
+          - { label: "Teilprojekt Spannungsfelder – Text", name: sf_teaser, widget: text }
+          - { label: Info-Box, name: infobox, widget: text }
+          - { label: Mitmachen & Unterstützen, name: mitmachen, widget: text }
+
+      - name: kaleidoskop
+        label: Kaleidoskop
+        file: content/kaleidoskop.json
+        format: json
+        fields:
+          - { label: "Einleitung (poetischer Absatz)", name: intro1, widget: text }
+          - { label: "Einleitung (Mitwirkende & Komponisten)", name: intro2, widget: text }
+          - { label: "Einleitung (Reflexionsfragen)", name: intro3, widget: text }
+          - { label: "Einleitung (künstlerische Umsetzung)", name: intro4, widget: text }
+          - { label: Schlusssatz, name: closing, widget: text }
+          - { label: "Termin 1", name: termin1, widget: string }
+          - { label: "Termin 2", name: termin2, widget: string }
+          - { label: "Musik – Einleitung (Teil 1)", name: musik_intro, widget: text }
+          - { label: "Musik – Einleitung (Teil 2)", name: musik_intro2, widget: text }
+          - { label: "Luther-Zitat", name: luther_zitat, widget: text }
+          - { label: "Luther – Schlusssatz", name: luther_schluss, widget: string }
           - { label: Info-Box, name: infobox, widget: text }
           - { label: Mitmachen & Unterstützen, name: mitmachen, widget: text }

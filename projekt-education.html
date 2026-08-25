@@ -38,23 +38,15 @@
       padding: 1.25rem 1.5rem; margin: 2rem 0;
     }
     .info-box p { margin: 0; font-size: 0.9rem; }
-    .activity-list {
-      list-style: none;
-      padding: 0;
-      margin: 1rem 0 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-    .activity-list li {
+    .edu-teaser {
       background: var(--cream);
-      color: var(--dark);
-      font-size: 0.88rem;
-      font-weight: 600;
-      padding: 0.4rem 0.85rem;
-      border-radius: 3px;
-      letter-spacing: 0.03em;
+      padding: 1.5rem 1.75rem;
+      margin: 2rem 0;
+      border-radius: 4px;
     }
+    .edu-teaser h2 { margin: 0 0 0.5rem; }
+    .edu-teaser p { margin-bottom: 1rem; }
+    .edu-teaser .projekt-link { font-weight: 700; }
   </style>
 </head>
 <body>
@@ -96,17 +88,11 @@
     <p data-cms-key="intro1">Seit 2008 unterstützt der Förderverein des Brandenburgischen Staatsorchesters Frankfurt (Oder) großangelegte Education-Projekte, die Kindern und Jugendlichen den Weg zur Musik öffnen – und sie dabei selbst zu Gestalterinnen und Gestaltern machen.</p>
     <p data-cms-key="intro2">Diese Großprojekte haben kaum Eigenmittel. Ohne externe Fördergelder und großzügige Sponsoren, aber auch ohne die Unterstützung des Fördervereins wären diese wichtigen Projekte nicht möglich. Unser Ziel ist es, <strong>Brücken zur Kultur zu bauen</strong> – für alle Kinder, unabhängig von Herkunft oder Vorkenntnissen.</p>
 
-    <h2 data-i18n="edu.was.h2">Was die Kinder erleben</h2>
-    <p data-cms-key="was_intro">In den Education-Projekten gestalten Kinder und Jugendliche aktiv mit. Sie bringen sich in vielfältigen künstlerischen Disziplinen ein:</p>
-    <ul class="activity-list">
-      <li data-i18n="edu.act1">Musik</li>
-      <li data-i18n="edu.act2">Choreographie</li>
-      <li data-i18n="edu.act3">Zeichnen</li>
-      <li data-i18n="edu.act4">Schreiben</li>
-      <li data-i18n="edu.act5">Tanzen</li>
-      <li data-i18n="edu.act6">Filmen</li>
-    </ul>
-    <p data-cms-key="was_text">Am Ende steht keine bloße Aufführung, sondern ein echtes gemeinsames Werk – entstanden aus dem kreativen Engagement junger Menschen, begleitet von einem professionellen Regie-Team und Musikerinnen und Musikern des BSOF.</p>
+    <div class="edu-teaser">
+      <h2 data-i18n="edu.spannungsfelder.h2">Teilprojekt: Spannungsfelder</h2>
+      <p data-cms-key="sf_teaser">Ein festes Format innerhalb unserer Education-Arbeit ist die Reihe „Spannungsfelder" – Musik, Theater und Tanz zu gesellschaftlichen Themen, gemeinsam mit Schülerinnen und Schülern aus Frankfurt (Oder) und der Region.</p>
+      <a class="projekt-link" href="projekt-spannungsfelder.html" data-i18n="edu.spannungsfelder.link">Mehr zu Spannungsfelder erfahren<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
 
     <div class="info-box">
       <p data-cms-key="infobox"><strong>Förderung durch den Förderverein BSOF:</strong> Die Education-Projekte werden durch Mitgliedsbeiträge des Vereins sowie durch Spenden und Fördergelder ermöglicht, die der Verein einwirbt.</p>
