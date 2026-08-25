@@ -46,14 +46,14 @@
     <a href="index.html" class="nav-logo">
       <img src="images/Logo%20ohne%20Hintergrund.svg" alt="Förderverein BSOF Logo" style="height:64px;width:auto;">
     </a>
-    <a href="index.html#projekte" class="btn btn-outline-dark" style="font-size:0.85rem;padding:0.6rem 1.25rem;">← Alle Projekte</a>
+    <a href="index.html#projekte" class="btn btn-outline-dark" style="font-size:0.85rem;padding:0.6rem 1.25rem;" onclick="if(window.history.length>1){history.back();return false;}">← Alle Projekte</a>
   </div>
 </nav>
 
 <main class="projekt-page">
   <div class="container" style="max-width:780px;">
 
-    <a href="index.html#projekte" class="back-link">
+    <a href="index.html#projekte" class="back-link" onclick="if(window.history.length>1){history.back();return false;}">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
         <polyline points="19 12 5 12"/><polyline points="12 5 5 12 12 19"/>
       </svg>
